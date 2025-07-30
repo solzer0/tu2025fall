@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap");
+
+@font-face {
+  font-family: "Bold";
+  src: url(/fonts/SUIT-Bold.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Regular";
+  src: url(/fonts/SUIT-Regular.otf) format("opentype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Bold";
+  letter-spacing: 0.05em;
+  background-color: #ffffff;
+  color: #000000;
+  position: relative;
+}
+
+/* 🔹 배경용 블러 포스터 */
+.poster-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./images/poster.png");
+  background-size: cover;
+  background-position: center;
+  filter: blur(10px);
+  z-index: -1;
+}
+
+/* 🔹 헤더 */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 10;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 1rem 0;
+  height: 60px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* 🔹 햄버거 버튼 */
+.menu-toggle {
+  position: absolute;
+  right: 1.3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 11;
+}
+
+.menu-toggle .bar {
+  height: 3px;
+  background-color: black;
+  border-radius: 25px;
+}
+
+/* 🔹 초록 헤더 둥근 영역 가림용 */
+.menu-cover {
+  position: fixed;
+  top: 30px;
+  width: 100%;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 9;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.menu-cover.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* 🔹 메뉴 */
+.menu {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  z-index: 8;
+  flex-direction: column;
+  padding: 0.5rem 0;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.menu.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  padding: 0.3rem 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+}
+
+/* 🔹 본문 콘텐츠 */
+main {
+  padding-top: 6rem;
+  position: relative;
+  z-index: 0;
+}
+
+/* 🔹 실제 포스터 보여줄 영역 */
+.poster-section {
+  margin: 1rem auto;
+  max-width: 600px;
+  padding: 1rem;
+  z-index: 0;
+}
+
+.poster-section img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* 🔹 임시 박스는 삭제하거나 주석 처리해도 됨 */
+.home-placeholder {
+  display: none;
+}
+
+/* 🔹 푸터 */
+footer {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  font-family: "Regular";
+  font-size: 1.3vh;
+  color: white;
+}
+
+footer > p {
+  margin: 0;
+  white-space: nowrap;
+}

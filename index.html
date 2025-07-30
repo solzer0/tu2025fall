@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TURAMI</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="poster-bg"></div>
+    <header>
+      <div class="header-wrapper">
+        <h1 class="logo">TURAMI</h1>
+        <button class="menu-toggle" id="menu-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- header 아래의 둥근 부분을 덮는 커버용 회색 박스 -->
+    <div class="menu-cover"></div>
+
+    <!-- 실제 메뉴 -->
+    <nav class="menu" id="menu">
+      <ul>
+        <li><a href="./index.html">HOME</a></li>
+        <li><a href="./html/about.html">ABOUT</a></li>
+        <li><a href="./html/setlist.html">SETLIST</a></li>
+        <li><a href="./html/members.html">MEMBERS</a></li>
+        <li><a href="./html/ticket.html">TICKET</a></li>
+        <li><a href="./html/sponsor.html">SPONSOR</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section class="poster-section">
+        <img src="/images/poster.png" alt="공연 포스터" />
+      </section>
+    </main>
+
+    <footer>
+      <p>Copyright(c) 2025 TURAMI, Hongik University. ALL RIGHTS RESERVED.</p>
+    </footer>
+
+    <script src="./js/header.js"></script>
+  </body>
+</html>
