@@ -42,7 +42,7 @@ header {
   display: flex;
   align-items: center; /* 수직(상하) 중앙 정렬 */
   padding: 0px;
-  background-color: black;
+  background-color: white;
   justify-content: space-between;
 }
 .header-title {
