@@ -1,174 +1,197 @@
 @import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap");
 
 @font-face {
-  font-family: "ExtraBold";
-  src: url(../tu2025fall/fonts/SUIT-ExtraBold.otf) format("opentype");
+  font-family: "Bold";
+  src: url(/fonts/SUIT-Bold.otf) format("opentype");
 }
 
 @font-face {
-  font-family: "Medium";
-  src: url(../tu2025fall/fonts/SUIT-Medium.otf) format("opentype");
+  font-family: "Regular";
+  src: url(/fonts/SUIT-Regular.otf) format("opentype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  /* abhaya-libre-extrabold */
-  font-family: "Abhaya Libre", serif;
-  /* font-weight: 800;
-    font-style: normal; */
-  background: white;
-}
-#poster {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 90vw;
-  /* max-height: calc(100vh - 110px); */
-  transform: translate(-50%, -50%) translateY(5px);
-  z-index: -1;
-}
-#blur-poster {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 90vw;
-  /* max-height: calc(100vh - 110px); */
-  transform: translate(-50%, -50%) translateY(5px);
-  filter: blur(7.5px);
-  z-index: -1;
+  font-family: "Bold";
+  letter-spacing: 0.05em;
+  background-color: #ffffff;
+  color: #000000;
+  position: relative;
 }
 
-/* header */
-header {
-  position: fixed;
-  top: 0px;
-  width: 100%;
-  height: 60px;
-  display: flex;
-  align-items: center; /* 수직(상하) 중앙 정렬 */
-  padding: 0px;
-  background-color: white;
-  justify-content: space-between;
-}
-.header-title {
-  display: flex;
-  align-items: center; /* 내부 요소들(이미지, 텍스트) 수직 중앙 정렬 */
-  margin-left: 23px; /* 왼쪽에서 30px 간격 */
-
-  font-size: 30px;
-  font-style: normal;
-  font-weight: 800;
-  line-height: normal;
-  color: black;
-}
-.header-title img {
-  height: 54px; /* 로고 크기 조절 */
-}
-.navbar-toggler {
-  padding: 0px;
-  margin-right: 16px; /* 오른쪽 버튼 간격 */
-}
-#ham-icon {
-  height: 24px;
-}
-
-/* navbar */
-.navbar {
-  z-index: 9999;
+/* 🔹 배경용 블러 포스터 */
+.poster-bg {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  padding: 0;
-  background: rgba(0, 0, 0, 0.5);
-  flex-direction: row-reverse;
-  display: none;
-}
-#x-icon {
-  position: relative;
-  top: 14px;
-  left: 169px;
-  height: 32px;
+  width: 100%;
+  height: 100%;
+  background-image: url("./images/poster.png");
+  background-size: cover;
+  background-position: center;
+  filter: blur(10px);
+  z-index: -1;
 }
 
-.nav-container {
-  width: 250px;
-  padding: 0px 0px 0px 33px; /* 윗쪽, 오른쪽, 아래쪽, 왼쪽 */
-  height: 100vh;
-  background-color: black;
-  display: grid;
-  grid-template-rows: 52px 35px 35px 35px 35px auto;
-  row-gap: 8px;
-}
-.nav-item {
-  color: black;
-  font-size: 30px;
-  font-style: normal;
-  font-weight: 800;
-  line-height: normal;
-  text-decoration: none; /* 밑줄 X */
-}
-.nav-emoji-container {
-  padding: 0%;
-  margin: 0%;
-  width: 217px;
-  height: 30px;
+/* 🔹 헤더 */
+header {
   position: fixed;
-  bottom: 24px;
-
-  display: flex;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 10;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
-.nav-icon {
-  margin: 0px;
-  padding: 0px;
-  width: 30px;
+
+.header-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 1rem 0;
+  height: 60px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* 🔹 햄버거 버튼 */
+.menu-toggle {
+  position: absolute;
+  right: 1.3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 11;
+}
+
+.menu-toggle .bar {
+  height: 3px;
+  background-color: black;
+  border-radius: 25px;
+}
+
+/* 🔹 초록 헤더 둥근 영역 가림용 */
+.menu-cover {
+  position: fixed;
+  top: 30px;
+  width: 100%;
   height: 30px;
-
-  display: flex;
-  justify-content: center; /* 가로 중앙 정렬 */
-  align-items: center; /* 세로 중앙 정렬 */
-}
-#instagram {
-  position: relative;
-  left: 12px;
-}
-#backhome {
-  position: relative;
-  left: 92px;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 9;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-main {
+.menu-cover.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* 🔹 메뉴 */
+.menu {
   position: absolute;
   top: 60px;
-  bottom: 50px;
-  width: 100vw;
-  height: calc(
-    100vh - 110px
-  ); /* 전체 높이에서 header(60px) + footer(50px) 제외 */
-  /*overflow: auto;   main 내부만 스크롤 가능 */
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  z-index: 8;
+  flex-direction: column;
+  padding: 0.5rem 0;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-footer {
-  display: flex;
-  margin: 0px;
-  width: 100%;
-  height: 50px;
-  position: fixed; /* 페이지를 스크롤해도 하단에 고정 */
-  bottom: 0px;
-  align-items: center;
-  justify-content: center;
-  background-color: black;
-  font-size: 9px;
-  color: white;
+.menu.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
-footer > p {
+
+.menu ul {
+  list-style: none;
+  padding: 0;
   margin: 0;
 }
 
-/* nav-item 클릭 시 색상 변화 방지 (강제 적용) */
-.nav-item:focus,
-.nav-item:active,
-.nav-item:visited {
-  color: #fdfbd4 !important; /* 기존 색상 유지 */
-  outline: none !important; /* 클릭 시 테두리 제거 */
+.menu li {
+  padding: 0.3rem 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+}
+
+/* 🔹 본문 콘텐츠 */
+main {
+  padding-top: 6rem;
+  position: relative;
+  z-index: 0;
+}
+
+/* 🔹 실제 포스터 보여줄 영역 */
+.poster-section {
+  margin: 1rem auto;
+  max-width: 600px;
+  padding: 1rem;
+  z-index: 0;
+}
+
+.poster-section img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* 🔹 임시 박스는 삭제하거나 주석 처리해도 됨 */
+.home-placeholder {
+  display: none;
+}
+
+/* 🔹 푸터 */
+footer {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  font-family: "Regular";
+  font-size: 1.3vh;
+  color: white;
+}
+
+footer > p {
+  margin: 0;
+  white-space: nowrap;
 }
