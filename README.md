@@ -10,11 +10,11 @@
 
 ## 📁 브랜치 구조
 
-| 브랜치 이름     | 담당 파일                      | 담당자 (예시)   |
+| 브랜치 이름     | 담당 파일                      | 담당자        |
 |----------------|---------------------------------|----------------|
 | `main`         | 전체 (배포용)                   | 신한영         |
-| `home-page`    | `index.html`, `main.css`        | 팀원 A         |
-| `about-page`   | `about.html`, `about.css`       | 팀원 B         |
+| `home-page`    | `index.html`, `main.css`        | 신한영         |
+| `about-page`   | `about.html`, `about.css`       | 신한영         |
 | `setlist-page` | `setlist.html`, `setlist.css`   | 팀원 C         |
 | `members-page` | `members.html`, `members.css`   | 팀원 E         |
 | `ticket-page`  | `ticket.html`, `ticket.css`     | 팀원 F         |
