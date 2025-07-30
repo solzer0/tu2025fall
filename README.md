@@ -13,9 +13,12 @@
 | 브랜치 이름     | 담당 파일                      | 담당자 (예시)   |
 |----------------|---------------------------------|----------------|
 | `main`         | 전체 (배포용)                   | PM 또는 리더   |
-| `about-page`   | `about.html`, `about.css`       | 팀원 A         |
-| `members-page` | `members.html`, `members.css`   | 팀원 B         |
-| `ticket-page`  | `ticket.html`, `ticket.css`     | 팀원 C         |
+| `home-page`    | `index.html`, `main.css`        | 팀원 A         |
+| `about-page`   | `about.html`, `about.css`       | 팀원 B         |
+| `setlist-page` | `setlist.html`, `setlist.css`   | 팀원 C         |
+| `members-page` | `members.html`, `members.css`   | 팀원 E         |
+| `ticket-page`  | `ticket.html`, `ticket.css`     | 팀원 F         |
+| `sponsor-page` | `sponsor.html`, `sponsor.css`   | 팀원 F         |
 
 ---
 
