@@ -12,7 +12,7 @@
 
 | 브랜치 이름     | 담당 파일                      | 담당자 (예시)   |
 |----------------|---------------------------------|----------------|
-| `main`         | 전체 (배포용)                   | PM 또는 리더   |
+| `main`         | 전체 (배포용)                   | 신한영         |
 | `home-page`    | `index.html`, `main.css`        | 팀원 A         |
 | `about-page`   | `about.html`, `about.css`       | 팀원 B         |
 | `setlist-page` | `setlist.html`, `setlist.css`   | 팀원 C         |
