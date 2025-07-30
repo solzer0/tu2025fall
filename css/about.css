@@ -1,0 +1,63 @@
+@font-face {
+  font-family: "ExtraBold";
+  src: url(../fonts/SUIT-ExtraBold.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Bold";
+  src: url(../fonts/SUIT-Bold.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Regular";
+  src: url(../fonts/SUIT-Regular.otf) format("opentype");
+}
+
+.about-tabs {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem auto 1rem;
+  gap: 1rem;
+}
+
+.about-tabs .tab {
+  padding: 0.4rem 1rem;
+  background-color: #ccc;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-family: "Regular";
+  font-size: 0.95rem;
+}
+
+.about-tabs .tab.active {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+}
+
+.about-content {
+  max-width: 600px;
+  margin: 0 auto 5rem;
+  padding: 0 1rem;
+  font-family: "Regular";
+  color: black;
+  z-index: 1;
+  position: relative;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.map-placeholder {
+  width: 100%;
+  height: 180px;
+  background-color: lightgray;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}

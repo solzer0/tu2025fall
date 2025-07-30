@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ABOUT</title>
+    <link rel="stylesheet" href="../main.css" />
+    <link rel="stylesheet" href="../css/about.css" />
+    <script defer src="../js/header.js"></script>
+  </head>
+  <body>
+    <div class="poster-bg"></div>
+
+    <!-- 헤더 -->
+    <header>
+      <div class="header-wrapper">
+        <div class="logo">ABOUT</div>
+        <button id="menu-toggle" class="menu-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+      <div class="menu-cover"></div>
+      <nav id="menu" class="menu">
+        <ul>
+          <li><a href="../index.html">HOME</a></li>
+          <li><a href="../html/about.html">ABOUT</a></li>
+          <li><a href="../html/setlist.html">SETLIST</a></li>
+          <li><a href="../html/members.html">MEMBERS</a></li>
+          <li><a href="../html/ticket.html">TICKET</a></li>
+          <li><a href="../html/sponsor.html">SPONSOR</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- 본문 -->
+    <main>
+      <section class="about-tabs">
+        <button class="tab active" data-tab="info">공연 정보</button>
+        <button class="tab" data-tab="location">오시는 길</button>
+        <button class="tab" data-tab="notice">주의사항</button>
+      </section>
+
+      <section class="about-content">
+        <!-- 공연 정보 -->
+        <div class="tab-content active" id="info">
+          <p>
+            기획 | 뚜라미<br />
+            연출 | 박지윤 육민준 이유준<br />
+            출연 | 강민혜 외 41명<br />
+            진행 | 박지윤 이제하<br />
+            포스터 | 선율<br />
+            웹디자인 | 김윤성 신한영 이우준 장민주<br />
+            영상촬영 | 류가연 성참솔 정서현<br />
+            믹싱 | 최태영
+          </p>
+          <p>
+            홍익대학교 중앙 창작곡 밴드 동아리 &lt;뚜라미&gt;의 2025년도 정기
+            가을 공연에 여러분을 초대합니다. 쌀라쌀라
+          </p>
+          <p>&lt;제휴 및 후원&gt;</p>
+        </div>
+
+        <!-- 오시는 길 -->
+        <div class="tab-content" id="location">
+          <div class="map-placeholder"></div>
+          <p>베짱이홀 (서울 마포구 독막로15길 3-12 NJ빌딩 B1)</p>
+        </div>
+
+        <!-- 주의사항 -->
+        <div class="tab-content" id="notice">
+          <ol>
+            <li>
+              <strong>공연장 질서 유지</strong><br />좌석 이동을 자제해 주세요.
+            </li>
+            <li>
+              <strong>공연장 내 촬영 및 음주 금지</strong><br />촬영 및 음주
+              행위는 금지됩니다.
+            </li>
+            <li>
+              <strong>교통 안내</strong><br />주차 공간이 협소하므로 대중교통
+              이용을 권장합니다.
+            </li>
+          </ol>
+          <h4>공연대표자 비상 연락망</h4>
+          <ul>
+            <li>신한영 : 010-4534-3216 (회장)</li>
+            <li>김리율 : 010-2490-4649 (부회장)</li>
+            <li>박지윤 : 010-3484-4465 (연출)</li>
+            <li>옥민준 : 010-5855-1968 (연출)</li>
+            <li>이우준 : 010-5918-5967 (연출)</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- 푸터 -->
+    <footer>
+      <p>Copyright(c) 2025 TURAMI, Hongik University. ALL RIGHTS RESERVED.</p>
+    </footer>
+
+    <script>
+      const tabs = document.querySelectorAll(".tab");
+      const contents = document.querySelectorAll(".tab-content");
+
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          tabs.forEach((t) => t.classList.remove("active"));
+          tab.classList.add("active");
+
+          contents.forEach((content) => {
+            content.classList.remove("active");
+          });
+          document.getElementById(tab.dataset.tab).classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>
