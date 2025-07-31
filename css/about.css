@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "Bold";
+  src: url(../fonts/SUIT-Bold.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Regular";
+  src: url(../fonts/SUIT-Regular.otf) format("opentype");
+}
+
 .about-container {
   margin: 6rem auto 3rem;
   max-width: 800px;
@@ -10,8 +20,9 @@
   margin-bottom: 1rem;
   border-radius: 30px;
   overflow: hidden;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(0, 0, 0, 0.4); /* 검은 불투명 */
   backdrop-filter: blur(5px);
+  color: white;
 }
 
 .tab {
@@ -22,11 +33,11 @@
   font-family: "Bold";
   background-color: transparent;
   transition: background-color 0.3s ease;
+  color: white;
 }
 
 .tab.active {
-  background-color: rgba(255, 255, 255, 0.7);
-  font-weight: bold;
+  background-color: black;
 }
 
 .content-box {
@@ -34,6 +45,9 @@
   backdrop-filter: blur(10px);
   padding: 2rem;
   border-radius: 30px;
+  font-family: "Regular";
+  max-height: 600px;
+  overflow-y: auto;
 }
 
 .tab-content > .tab-pane {
@@ -46,14 +60,20 @@
 
 .content1 {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row; /* 나란히 배치 */
+  align-items: flex-start;
+  gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
 #tab-poster {
-  width: 80%;
-  border-radius: 12px;
-  margin-bottom: 1rem;
+  width: 200px;
+  border-radius: 14px;
+  flex-shrink: 0;
+}
+
+.info-text1 {
+  flex: 1;
 }
 
 .info-text1 p {
