@@ -1,63 +1,74 @@
-@font-face {
-  font-family: "ExtraBold";
-  src: url(../fonts/SUIT-ExtraBold.otf) format("opentype");
+.about-container {
+  margin: 6rem auto 3rem;
+  max-width: 800px;
+  padding: 1rem;
 }
 
-@font-face {
-  font-family: "Bold";
-  src: url(../fonts/SUIT-Bold.otf) format("opentype");
-}
-
-@font-face {
-  font-family: "Regular";
-  src: url(../fonts/SUIT-Regular.otf) format("opentype");
-}
-
-.about-tabs {
+.tabs {
   display: flex;
-  justify-content: center;
-  margin: 1.5rem auto 1rem;
-  gap: 1rem;
-}
-
-.about-tabs .tab {
-  padding: 0.4rem 1rem;
-  background-color: #ccc;
-  border: none;
+  justify-content: space-around;
+  margin-bottom: 1rem;
   border-radius: 30px;
-  cursor: pointer;
-  font-family: "Regular";
-  font-size: 0.95rem;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
 }
 
-.about-tabs .tab.active {
-  background-color: black;
-  color: white;
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 0.8rem 0;
+  cursor: pointer;
+  font-family: "Bold";
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.tab.active {
+  background-color: rgba(255, 255, 255, 0.7);
   font-weight: bold;
 }
 
-.about-content {
-  max-width: 600px;
-  margin: 0 auto 5rem;
-  padding: 0 1rem;
-  font-family: "Regular";
-  color: black;
-  z-index: 1;
-  position: relative;
+.content-box {
+  background-color: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 30px;
 }
 
-.tab-content {
+.tab-content > .tab-pane {
   display: none;
 }
 
-.tab-content.active {
+.tab-content > .tab-pane.active {
   display: block;
 }
 
-.map-placeholder {
-  width: 100%;
-  height: 180px;
-  background-color: lightgray;
-  border-radius: 10px;
+.content1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#tab-poster {
+  width: 80%;
+  border-radius: 12px;
   margin-bottom: 1rem;
+}
+
+.info-text1 p {
+  margin: 0.3rem 0;
+}
+
+.content1-1,
+.content2-1,
+.content3 {
+  margin-top: 1.5rem;
+  line-height: 1.6;
+}
+
+#radio-map {
+  width: 100%;
+  margin: 1rem 0;
+  border-radius: 12px;
 }
