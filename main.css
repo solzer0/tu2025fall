@@ -177,9 +177,7 @@ main {
   bottom: 50px; /* footer 높이 */
   left: 0;
   right: 0;
-  overflow-y: auto; /*본문만 스크롤*/
-  padding: 1rem;
-  
+  overflow-y: auto; /*본문만 스크롤*/  
 }
 
 /* 🔹 실제 포스터 보여줄 영역 */
