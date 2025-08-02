@@ -21,7 +21,20 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+
   font-family: "ExtraBold";
   letter-spacing: 0.05em;
   background-color: #ffffff;
@@ -157,9 +170,16 @@ header {
 
 /* 🔹 본문 콘텐츠 */
 main {
-  padding-top: 6rem;
-  position: relative;
   z-index: 0;
+
+  position: absolute;
+  top: 60px; /* header 높이 */
+  bottom: 50px; /* footer 높이 */
+  left: 0;
+  right: 0;
+  overflow-y: auto; /*본문만 스크롤*/
+  padding: 1rem;
+  
 }
 
 /* 🔹 실제 포스터 보여줄 영역 */
