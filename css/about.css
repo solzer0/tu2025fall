@@ -116,7 +116,7 @@
 /* ✅ 모바일 반응형 조정 */
 @media (max-width: 600px) {
   .about-container {
-    margin-top: -1rem;
+    margin-top: 0.5rem;
     padding: 0.5rem;
     max-width: 95%;
   }
@@ -132,7 +132,7 @@
   }
 
   .content-box {
-    height: 68vh;
+    height: 63vh;
     padding: 1rem;
     overflow-y: auto;
   }
