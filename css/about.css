@@ -8,6 +8,20 @@
   src: url(../fonts/SUIT-Regular.otf) format("opentype");
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden; /* 가로 스크롤 방지 */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 .about-container {
   margin: 6rem auto 3rem;
   max-width: 800px;
@@ -47,7 +61,8 @@
   padding: 2rem;
   border-radius: 30px;
   font-family: "Regular";
-  height: 550px;
+  height: auto;
+  max-height: calc(100vh - 180px); /* 탭 높이 + 여백 고려 */
   overflow-y: auto;
   box-sizing: border-box;
 }
@@ -152,7 +167,7 @@
 
   .info-text1 p {
     margin: 0.1rem 0;
-    line-height: 1.2;
+    line-height: 1.6;
   }
 
   .info-text1 p,
