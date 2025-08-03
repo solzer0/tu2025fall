@@ -86,8 +86,7 @@
 }
 
 .content1-1,
-.content2-1,
-.content3 {
+.content2-1 {
   margin-top: 1.5rem;
   line-height: 1.6;
 }
@@ -99,6 +98,11 @@
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  line-height: 1.6;
+}
+
+.content3 {
+  line-height: 1.6;
 }
 
 /* ✅ 카카오맵 wrapper 스타일 */
@@ -116,7 +120,7 @@
 /* ✅ 모바일 반응형 조정 */
 @media (max-width: 600px) {
   .about-container {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
     padding: 0.5rem;
     max-width: 95%;
   }
@@ -140,15 +144,6 @@
   .tab-content {
     overflow-y: auto;
     max-height: 100%;
-  }
-
-  footer {
-    width: 100%;
-    padding: 1rem 0;
-    text-align: center;
-    font-size: 0.5rem;
-    background-color: black;
-    color: white;
   }
 
   #tab-poster {
