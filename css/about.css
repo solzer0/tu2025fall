@@ -12,7 +12,6 @@
   margin: 6rem auto 3rem;
   max-width: 800px;
   padding: 1rem;
-  margin-top: 0%;
 }
 
 .tabs {
@@ -21,7 +20,7 @@
   margin-bottom: 1rem;
   border-radius: 30px;
   overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.4); /* 검은 불투명 */
+  background-color: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(5px);
   color: white;
 }
@@ -35,6 +34,7 @@
   background-color: transparent;
   transition: background-color 0.3s ease;
   color: white;
+  border-radius: 30px;
 }
 
 .tab.active {
@@ -47,8 +47,9 @@
   padding: 2rem;
   border-radius: 30px;
   font-family: "Regular";
-  max-height: 600px;
+  height: 600px;
   overflow-y: auto;
+  box-sizing: border-box;
 }
 
 .tab-content > .tab-pane {
@@ -61,7 +62,7 @@
 
 .content1 {
   display: flex;
-  flex-direction: row; /* 나란히 배치 */
+  flex-direction: row;
   align-items: flex-start;
   gap: 1.5rem;
   flex-wrap: wrap;
@@ -75,10 +76,13 @@
 
 .info-text1 {
   flex: 1;
+  word-break: keep-all;
 }
 
 .info-text1 p {
   margin: 0.3rem 0;
+  font-size: 1rem;
+  line-height: 1.4;
 }
 
 .content1-1,
@@ -88,8 +92,97 @@
   line-height: 1.6;
 }
 
+/* ✅ 오시는 길 탭 중앙 정렬 */
+.content2 {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* ✅ 카카오맵 wrapper 스타일 */
+.kakao-map-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 640px;
+  aspect-ratio: 16 / 9;
+  margin: 0 auto;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* ✅ 모바일 반응형 조정 */
+@media (max-width: 600px) {
+  .about-container {
+    margin-top: -1rem;
+    padding: 0.5rem;
+    max-width: 95%;
+  }
+
+  .tabs {
+    margin: 0 auto 1rem;
+    width: 100%;
+  }
+
+  .tab {
+    padding: 0.6rem 0;
+    font-size: 0.85rem;
+  }
+
+  .content-box {
+    height: 68vh;
+    padding: 1rem;
+    overflow-y: auto;
+  }
+
+  .tab-content {
+    overflow-y: auto;
+    max-height: 100%;
+  }
+
+  footer {
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 0.5rem;
+    background-color: black;
+    color: white;
+  }
+
+  #tab-poster {
+    width: 110px;
+  }
+
+  .info-text1 p {
+    margin: 0.1rem 0;
+    line-height: 1.2;
+  }
+
+  .info-text1 p,
+  .content1-1,
+  .content2-1,
+  .content3 {
+    font-size: min(3vw, 0.95rem);
+    word-break: keep-all;
+  }
+
+  .kakao-map-wrapper {
+    max-width: 100%;
+    aspect-ratio: 4 / 3;
+    border-radius: 30px;
+  }
+}
+
 #radio-map {
   width: 100%;
   margin: 1rem 0;
   border-radius: 12px;
+}
+
+/* 카카오 지도 자동 추가 텍스트 제거 */
+#daumRoughmapContainer1753927748378 .wrap_controllers,
+#daumRoughmapContainer1753927748378 .wrap_map > div:last-child {
+  display: none !important;
 }
