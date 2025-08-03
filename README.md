@@ -15,10 +15,10 @@
 | `main`         | 전체 (배포용)                   | 신한영         |
 | `home-page`    | `index.html`, `main.css`        | 신한영         |
 | `about-page`   | `about.html`, `about.css`       | 신한영         |
-| `setlist-page` | `setlist.html`, `setlist.css`   | 팀원 C         |
-| `members-page` | `members.html`, `members.css`   | 팀원 E         |
-| `ticket-page`  | `ticket.html`, `ticket.css`     | 팀원 F         |
-| `sponsor-page` | `sponsor.html`, `sponsor.css`   | 팀원 F         |
+| `setlist-page` | `setlist.html`, `setlist.css`   | 김윤성         |
+| `members-page` | `members.html`, `members.css`   | 장민주         |
+| `ticket-page`  | `ticket.html`, `ticket.css`     | (미정)         |
+| `sponsor-page` | `sponsor.html`, `sponsor.css`   | (미정)         |
 
 ---
 
