@@ -1,0 +1,99 @@
+@font-face {
+  font-family: "Bold";
+  src: url(../fonts/SUIT-Bold.otf) format("opentype");
+}
+@font-face {
+  font-family: "Regular";
+  src: url(../fonts/SUIT-Regular.otf) format("opentype");
+}
+body {
+  margin: 0;
+  font-family: "Regular";
+  background: #f8f8f8;
+}
+main.setlist-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding: 2rem;
+  background: url('../images/poster.jpg') no-repeat center center / cover;
+}
+.setlist-wrapper {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 900px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 30px;
+  padding: 2rem;
+}
+.setlist-tabs {
+  display: flex;
+  justify-content: space-around;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  border-radius: 30px;
+  font-family: "Bold";
+  color: white;
+}
+.setlist-tabs .tab {
+  flex: 1;
+  text-align: center;
+  padding: 0.8rem 0;
+  cursor: pointer;
+  border-radius: 30px;
+}
+.setlist-tabs .tab.active {
+  background-color: black;
+}
+.song-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.song-list li {
+  background: white;
+  padding: 0.8rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: "Bold";
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+.song-list li:hover {
+  background: #eee;
+}
+.setlist-right {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  padding: 1.2rem;
+  border-radius: 30px;
+  height: 100%;
+}
+.song-detail-header {
+  font-family: "Bold";
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+.song-lyrics-scroll {
+  overflow-y: auto;
+  max-height: 50vh;
+  font-family: "Regular";
+  font-size: 0.9rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: black;
+  color: white;
+  font-size: 0.8rem;
+}

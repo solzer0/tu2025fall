@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SETLIST | TURAMI</title>
+    <link rel="stylesheet" href="../main.css" />
+    <link rel="stylesheet" href="../css/setlist.css" />
+	</head>
+
+  <body>
+    <div class="poster-bg"></div>
+    
+    <header>
+      <div class="header-wrapper">
+        <h1 class="logo">ABOUT</h1>
+        <button class="menu-toggle" id="menu-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </header>
+
+    <div class="menu-cover"></div>
+
+    <nav class="menu" id="menu">
+      <ul>
+        <li><a href="../index.html">HOME</a></li>
+        <li><a href="./about.html">ABOUT</a></li>
+        <li><a href="./setlist.html">SETLIST</a></li>
+        <li><a href="./members.html">MEMBERS</a></li>
+        <li><a href="./ticket.html">TICKET</a></li>
+        <li><a href="./sponsor.html">SPONSOR</a></li>
+      </ul>
+    </nav>
+
+    <main class="setlist-page">
+      <div class="setlist-wrapper">
+        <!-- Left: Tabs + Song List -->
+          <div class="setlist-left">
+              <div class="setlist-tabs">
+                <div class="tab active" data-part="1">1부</div>
+                <div class="tab" data-part="2">2부</div>
+              </div>
+            <ul class="song-list" id="songList">
+              <!-- JavaScript에서 삽입 -->
+            </ul>
+          </div>
+
+        <!-- Right: Song Detail -->
+          <div class="setlist-right">
+            <div class="song-detail-header">
+              클릭하여 세부정보를 확인해주세요!<br />창을 다시 클릭하면 창이 닫힙니다.
+            </div>
+            <div class="song-lyrics-scroll"></div>
+          </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>Copyright(c) 2025 TURAMI, Hongik University. ALL RIGHTS RESERVED.</p>
+    </footer>
+
+    <script src="../js/header.js"></script>
+    <script src="../js/setlist.js"></script>
+  </body>
+</html>
