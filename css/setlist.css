@@ -89,6 +89,8 @@ main.setlist-page {
   font-size: 0.9rem;
   line-height: 1.6;
   white-space: pre-wrap;
+  border-top: 1px solid #000;
+  padding-top: 1rem;
 }
 footer {
   text-align: center;
