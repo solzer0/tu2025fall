@@ -11,3 +11,7 @@
   src: url(../fonts/SUIT-Regular.otf) format("opentype");
 }
 
+.st      { background-image: url(../images/StMusicBand.png); }
+.first    { background-image: url(../images/퍼스트삼성안과.png); }
+.rockzip { background-image: url(../images/록집.png); }
+.nabok   { background-image: url(../images/나들목.png); }
