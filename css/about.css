@@ -44,6 +44,7 @@ body {
   padding: 0.8rem 0;
   cursor: pointer;
   font-family: "Bold";
+  font-weight: 600;
   background-color: transparent;
   transition: background-color 0.3s ease;
   color: white;
