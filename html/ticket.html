@@ -37,7 +37,7 @@
     <main>
         <section class="ticket-card">
             <div class="ticket-kind">
-                <a href="https://youtube.com/shorts/SrRfRatYn70?si=55ZU9dZ5kdf67biG">선예매 링크 (클릭)</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfQycRbrBGzwciD-Vj-TTbkd57O77r8GKjTcKCVpQ-7dkBk2g/viewform?usp=dialog">선예매 링크 (클릭)</a>
             </div>
             <p class="ticket-info">가격 | 5,000원<br>3333325974473 카카오뱅크 임경재</p>
         </section>
@@ -46,9 +46,30 @@
             <p class="ticket-info">공연 당일은 현장예매만 가능</p>
         </section>
         <section class="recruit-card">
-            <a href="https://youtube.com/shorts/SrRfRatYn70?si=55ZU9dZ5kdf67biG">뚜라미 신입부원 모집 링크 (클릭)</a>
-        </section>        
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSckkaKlBG0LiLMhJatOF9hwN5lmlBs9E42-oivyMAx-R-In7Q/viewform?usp=dialog">뚜라미 신입부원 모집 링크 (클릭)</a>
+        </section>    
+        <section class="recruit-card">
+            <a href="https://youtube.com/shorts/SrRfRatYn70?si=55ZU9dZ5kdf67biG">뚜라미 2025 봄공연 쇼츠</a>
+        </section>      
     </main>
+
+    <script>
+      document.querySelectorAll(".ticket-info").forEach(el => {
+        el.addEventListener("click", () => {
+          const fullText = el.textContent.replace(/\n/g, " ").trim();
+                    const match = fullText.match(/(\d{10,}\s+카카오뱅크\s+\S+)/);
+          
+          if (match) {
+            const accountText = match[1];
+            navigator.clipboard.writeText(accountText)
+              .then(() => alert("복사되었습니다!\n" + accountText))
+              .catch(err => console.error("복사 실패:", err));
+          }
+
+        });
+      });
+    </script>
+
 
     <footer>
       <p>Copyright(c) 2025 TURAMI, Hongik University. ALL RIGHTS RESERVED.</p>
