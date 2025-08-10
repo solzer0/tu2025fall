@@ -10,9 +10,10 @@
 
 .member-list {
     display: grid;
-    grid-template-rows: repeat(auto-fit, 30px); 
+    grid-template-rows: repeat(auto-fit, 39px); 
     gap: 10px;  /*row 사이 간격*/
-    margin: 2rem 1rem; /* 🔹 상하 2rem, 좌우 1rem */
+    margin: 0 1.2rem;   /* 좌우 마진 */
+    padding: 2rem 0;    /* 상하 패딩 */
     max-height: calc(100vh - 120px);  /*화면 전체 높이 - (header + footer의 높이) */
     overflow-y: auto; /*내부 콘텐츠를 스크롤*/
 }
@@ -20,33 +21,34 @@
 .member-item {
     display: flex;  /*가로한줄 배치*/
     align-items: center; /*자식 요소들 세로 중앙 정렬*/
-    height: 30px;
+    height: 39px;
     background: rgba(22, 88, 193, 0.39);
-    border-radius: 15px;
+    border-radius: 19.333px;
 
     color: white;
     overflow: hidden;   /*내부 콘텐츠가 넘칠 경우, 넘치는 부분은 잘라버림*/
     white-space: nowrap;    /*줄바꿈 허용 안해*/
     text-overflow: ellipsis;    /*텍스트가 넘칠 경우 말줄임표(...) 로 표시*/
-    gap: 0.5rem; /* 🔹 name과 desc 사이 약간의 간격 */
+    gap: 0.7rem; /* 🔹 name과 desc 사이 약간의 간격 */
 }
 
 
 .name {
+    text-align: center;
     display: flex;
     align-items: center;  /* 세로 중앙 정렬 */
     justify-content: center; /* 텍스트 가운데 정렬 (선택) */
-    height: 30px;
-    width: 80px;
+    height: 39px;
+    width: 108px;
     background-color: #1658C1;
     font-family: "ExtraBold";
-    font-size: 12px;
-    border-radius: 15px;
+    font-size: 15px;
+    border-radius: 19.333px;
 }
 
 .desc {
     font-family: "Regular";
-    font-size: 9px;
+    font-size: 12px;
     text-overflow: ellipsis;
     flex-grow: 1;  /*🔹 남는 공간 다 차지*/
 }
