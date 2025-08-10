@@ -12,21 +12,27 @@
 }
 
 
+.sponsor-list {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    row-gap: 12px; 
+    column-gap: 11px;
+
+    margin: 28px 30px;
+}
+
+/* 배경 이미지 변수로 설정*/
 .st      { --bg: url("../images/StMusicBand.png"); }
 .first   { --bg: url("../images/퍼스트삼성안과.png"); }
 .rockzip { --bg: url("../images/록집.png"); }
 .nadeul  { --bg: url("../images/나들목.png"); }
 
-.sponsor-list {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    row-gap: 12px; 
-    column-gap: 9px;
-
-    margin: 30px 30px;
-}
-
 .sponsor-item{
+    all: unset; /* 버튼 기본 스타일 제거*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     height: 66px;    
     aspect-ratio: 7/3; /*가로:세로 비율을 7:3*/
 
@@ -36,6 +42,7 @@
     background-position: center, center;
     position: relative;
     overflow: hidden; /*요소 밖으로 삐져나온 자식 요소나 배경이 잘리도록*/
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.25);
 
     font-family: ExtraBold;
     font-size: 12px;

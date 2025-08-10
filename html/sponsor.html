@@ -59,6 +59,78 @@
     </main>
 
 
+    <script>
+    const SPONSORS_DATA = {
+        st: {
+        name: 'ST MUSIC BAND',
+        addr: '(서울 마포구 와우산로29길 54)',
+        hero: './images/sponsor/st-hero.jpg',
+        link: 'https://naver.me/st-music-band'
+        },
+        fest: {
+        name: '페스트 삼성 안과',
+        addr: '(주소 예시)',
+        hero: './images/sponsor/fest-hero.jpg',
+        link: 'https://example.com/fest'
+        },
+        rockzip: {
+        name: '록집 (ROCKZIP)',
+        addr: '(주소 예시)',
+        hero: './images/sponsor/rockzip-hero.jpg',
+        link: 'https://example.com/rockzip'
+        },
+        nabok: {
+        name: '나복',
+        addr: '(주소 예시)',
+        hero: './images/sponsor/nabok-hero.jpg',
+        link: 'https://example.com/nabok'
+        }
+    };
+
+    const grid = document.querySelector('.sponsor-grid');
+    const detail = document.getElementById('sponsor-detail');
+    const nameEl = detail.querySelector('.sponsor-detail__name');
+    const addrEl = detail.querySelector('.sponsor-detail__addr');
+    const imgEl  = detail.querySelector('.sponsor-hero img');
+    const linkEl = detail.querySelector('.sponsor-link');
+
+    let currentId = null;
+
+    grid.addEventListener('click', (e) => {
+        const btn = e.target.closest('.sponsor-card');
+        if (!btn) return;
+
+        const id = btn.dataset.id;
+        const data = SPONSORS_DATA[id];
+        if (!data) return;
+
+        // aria-expanded 상태 업데이트 (한 개만 true)
+        grid.querySelectorAll('.sponsor-card[aria-expanded="true"]')
+            .forEach(b => b.setAttribute('aria-expanded', 'false'));
+        btn.setAttribute('aria-expanded', 'true');
+
+        // 상세 카드 채우기
+        detail.classList.add('is-animating');
+        nameEl.textContent = data.name;
+        addrEl.textContent = data.addr;
+        imgEl.src = data.hero;
+        imgEl.alt = `${data.name} 이미지`;
+        linkEl.href = data.link;
+
+        // 보이기 + 스크롤
+        if (detail.hasAttribute('hidden')) detail.removeAttribute('hidden');
+
+        // 약간의 애니메이션 후 클래스 제거
+        setTimeout(() => detail.classList.remove('is-animating'), 150);
+
+        // 그리드 바로 아래로 스크롤(모바일 편의)
+        detail.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+        currentId = id;
+    });
+    </script>
+        
+
     <footer>
       <p>Copyright(c) 2025 TURAMI, Hongik University. ALL RIGHTS RESERVED.</p>
     </footer>
