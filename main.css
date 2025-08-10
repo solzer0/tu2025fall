@@ -2,11 +2,6 @@
 
 @font-face {
   font-family: "ExtraBold";
-  src: url(../tu2025fall/fonts/SUIT-ExtraBold.otf) format("opentype");
-}
-
-@font-face {
-  font-family: "Bold";
   src: url(../tu2025fall/fonts/SUIT-Bold.otf) format("opentype");
 }
 
@@ -21,7 +16,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -38,7 +34,7 @@ body {
   font-family: "ExtraBold";
   letter-spacing: 0.05em;
   background-color: #ffffff;
-  color: #1658C1;
+  color: #1658c1;
   position: relative;
 }
 
@@ -103,7 +99,7 @@ header {
 
 .menu-toggle .bar {
   height: 3px;
-  background-color: #1658C1;
+  background-color: #1658c1;
   border-radius: 25px;
 }
 
@@ -177,7 +173,7 @@ main {
   bottom: 50px; /* footer 높이 */
   left: 0;
   right: 0;
-  overflow-y: auto; /*본문만 스크롤*/  
+  overflow-y: auto; /*본문만 스크롤*/
 
   /* 드래그 방지*/
   user-select: none;
@@ -185,10 +181,11 @@ main {
   -ms-user-select: none;
   -webkit-touch-callout: none;
 }
-body.home main { /* 가로 세로 중앙 */
-  display: flex;             
-  align-items: center;       
-  justify-content: center;    
+body.home main {
+  /* 가로 세로 중앙 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 /*body.home main { 
   user-select: none;
@@ -228,7 +225,7 @@ footer {
   bottom: 0;
   align-items: center;
   justify-content: center;
-  background-color: #1658C1;
+  background-color: #1658c1;
   font-family: "Regular";
   font-size: 1.3vh;
   color: white;
