@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "Bold";
+  src: url(../fonts/SUIT-Bold.otf) format("opentype");
+}
+@font-face {
+  font-family: "ExtraBold";
+  src: url(../fonts/SUIT-ExtraBold.otf) format("opentype");
+}
+@font-face {
+  font-family: "Regular";
+  src: url(../fonts/SUIT-Regular.otf) format("opentype");
+}
+
