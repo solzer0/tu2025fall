@@ -38,67 +38,80 @@
       <div class="sponsor-box">
         <div class="sponsor-list">
           <button class="sponsor-item st" id="st">ST MUSIC BAND</button>
-          <button class="sponsor-item first" id="first">퍼스트 삼성 안과</button>
-          <button class="sponsor-item rockzip" id="rockzip">록집 (ROCKZIP)</button>
+          <button class="sponsor-item first" id="first">
+            퍼스트 삼성 안과
+          </button>
+          <button class="sponsor-item rockzip" id="rockzip">
+            록집 (ROCKZIP)
+          </button>
           <button class="sponsor-item nadeul" id="nadeul">나들목</button>
         </div>
 
         <section class="sponsor-card" id="sponsor-card">
           <h2 class="sponsor-name">ST MUSIC BAND</h2>
           <p class="sponsor-addr">(서울 마포구 와우산로29길 54)</p>
-          <div class="sponsor-image"><img src='../images/StMusicBand.png' /></div>
-          <a class="sponsor-link" href='https://naver.me/FTXwq1T8' target="_blank" rel="noopener noreferrer">링크열기</a>
+          <div class="sponsor-image">
+            <img src="../images/StMusicBand.png" />
+          </div>
+          <a
+            class="sponsor-link"
+            href="https://naver.me/FTXwq1T8"
+            target="_blank"
+            rel="noopener noreferrer"
+            >링크열기</a
+          >
         </section>
       </div>
     </main>
 
-
     <script>
       const SPONSORS_DATA = {
-          st: {
-              name: 'ST MUSIC BAND',
-              addr: '(서울 마포구 와우산로29길 54)',
-              hero: '../images/StMusicBand.png',
-              link: 'https://naver.me/FTXwq1T8'
-          },
-          first: {
-              name: '퍼스트 삼성 안과',
-              addr: '(주소 예시)',
-              hero: '../images/퍼스트삼성안과.png',
-              link: 'https://naver.me/53lIeuYM'
-          },
-          rockzip: {
-              name: '록집 (ROCKZIP)',
-              addr: '(주소 예시)',
-              hero: '../images/록집.png',
-              link: 'https://naver.me/xJiB7zsA'
-          },
-          nadeul: {
-              name: '나들목',
-              addr: '(주소 예시)',
-              hero: '../images/나들목.png',
-              link: 'https://naver.me/IGJyAnZc'
-          }
+        st: {
+          name: "ST MUSIC BAND",
+          addr: "(서울 마포구 와우산로29길 54)",
+          hero: "../images/StMusicBand.png",
+          link: "https://naver.me/FTXwq1T8",
+        },
+        first: {
+          name: "퍼스트 삼성 안과",
+          addr: "(서울 서초구 서초대로78길 22 홍우제2빌딩 5층)",
+          hero: "../images/퍼스트삼성안과.png",
+          link: "https://naver.me/53lIeuYM",
+        },
+        rockzip: {
+          name: "록집 (ROCKZIP)",
+          addr: "(서울 마포구 와우산로15길 37 지층 우측)",
+          hero: "../images/록집.png",
+          link: "https://naver.me/xJiB7zsA",
+        },
+        nadeul: {
+          name: "나들목",
+          addr: "(서울특별시 마포구 독막로14길 31 2층)",
+          hero: "../images/나들목.png",
+          link: "https://naver.me/IGJyAnZc",
+        },
       };
 
       // 페이지 로드 시 ST MUSIC BAND 버튼에 active 적용
-      document.getElementById('st').classList.add('active');
+      document.getElementById("st").classList.add("active");
 
-      const list = document.querySelector('.sponsor-list');
-      const card = document.getElementById('sponsor-card');
-      
-      const name_clicked = card.querySelector('.sponsor-name');
-      const addr_clicked = card.querySelector('.sponsor-addr');
-      const img_clicked  = card.querySelector('.sponsor-image img');
-      const link_clicked = card.querySelector('.sponsor-link');
+      const list = document.querySelector(".sponsor-list");
+      const card = document.getElementById("sponsor-card");
 
-      list.addEventListener('click', (e) => {
-        const item_clicked = e.target.closest('.sponsor-item'); //사용자가 실제 클릭한 버튼
+      const name_clicked = card.querySelector(".sponsor-name");
+      const addr_clicked = card.querySelector(".sponsor-addr");
+      const img_clicked = card.querySelector(".sponsor-image img");
+      const link_clicked = card.querySelector(".sponsor-link");
+
+      list.addEventListener("click", (e) => {
+        const item_clicked = e.target.closest(".sponsor-item"); //사용자가 실제 클릭한 버튼
         if (!item_clicked) return;
 
         // clicked 되었음을 표시
-        document.querySelectorAll('.sponsor-item').forEach(b => b.classList.remove('active'));
-        item_clicked.classList.add('active');
+        document
+          .querySelectorAll(".sponsor-item")
+          .forEach((b) => b.classList.remove("active"));
+        item_clicked.classList.add("active");
 
         const item_id = item_clicked.id; // "st", "first", "rockzip", "nadeul"
         const sponsor_data = SPONSORS_DATA[item_id];
@@ -110,7 +123,6 @@
         link_clicked.href = sponsor_data.link;
       });
     </script>
-        
 
     <footer>
       <p>Copyright(c) 2025 TURAMI, Hongik University. ALL RIGHTS RESERVED.</p>

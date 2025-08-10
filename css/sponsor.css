@@ -1,15 +1,15 @@
 @font-face {
-  font-family: "ExtraBold";
-  src: url(../fonts/SUIT-Bold.otf) format("opentype");
+  font-family: "Bold";
+  src: url(../fonts/noto-sans.bold.ttf) format("truetype");
 }
 @font-face {
   font-family: "Regular";
-  src: url(../fonts/SUIT-Regular.otf) format("opentype");
+  src: url(../fonts/noto-sans.regular.ttf) format("truetype");
 }
 
 .sponsor-box {
   display: grid;
-  grid-template-rows: auto 1fr; 
+  grid-template-rows: auto 1fr;
   gap: 20px;
   padding-bottom: 48px;
   width: 100%;
@@ -18,60 +18,90 @@
 
 .sponsor-list {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
-  row-gap: 12px; 
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 12px;
   column-gap: 11px;
   margin: 30px 30px;
 
-  justify-items: center; 
-  align-items: center; 
+  justify-items: center;
+  align-items: center;
 }
 
 /* 배경 이미지 변수로 설정*/
-.st      { --bg: url("../images/StMusicBand.png"); }
-.first   { --bg: url("../images/퍼스트삼성안과.png"); }
-.rockzip { --bg: url("../images/록집.png"); }
-.nadeul  { --bg: url("../images/나들목.png"); }
+.st {
+  --bg: url("../images/StMusicBand.png");
+}
+.first {
+  --bg: url("../images/퍼스트삼성안과.png");
+}
+.rockzip {
+  --bg: url("../images/록집.png");
+}
+.nadeul {
+  --bg: url("../images/나들목.png");
+}
 
-.sponsor-item{
-  all: unset; /* 버튼 기본 스타일 제거*/
+/* ========== 버튼(타일) ========== */
+.sponsor-item {
+  all: unset; /* 기본 버튼 스타일 제거 */
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
   width: 100%;
-  height: 66px;    
+  height: 66px;
 
   border-radius: 15px;
-  background-image: linear-gradient(0deg, rgba(0,0,0,.40), rgba(0,0,0,.40)), var(--bg);
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    var(--bg);
   background-size: cover, cover;
   background-position: center, center;
   position: relative;
-  overflow: hidden; /*요소 밖으로 삐져나온 자식 요소나 배경이 잘리도록*/
-  box-shadow: 5px 5px 10px rgba(0,0,0,0.25);
+  overflow: hidden;
+  /* 기존 그림자 보존 + 이후 상태 변화에 대비해서 변수로 */
+  --elev: 5px 5px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: var(--elev);
 
-  font-family: ExtraBold;
+  font-family: "Regular";
   font-size: 13px;
+  font-weight: 600;
   color: white;
+
+  /* ✅ 손바닥 커서 + 부드러운 테두리 트랜지션 */
+  cursor: pointer;
+  transition: box-shadow 0.2s ease, transform 0.08s ease;
 }
 
+/* 호버/포커스 가이드(선택) */
+.sponsor-item:hover,
+.sponsor-item:focus-visible {
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.6), var(--elev);
+}
+
+/* ✅ 클릭으로 활성화될 때 흰 테두리가 '부드럽게' 나타남 */
 .sponsor-item.active {
-  outline: 2px solid white;
-  /* 클릭 순간 살짝 축소 */
-  /*transform: scale(0.98);*/
+  /* outline 대신 트랜지션 가능한 inset box-shadow 사용 */
+  box-shadow: inset 0 0 0 2px #fff, var(--elev);
+  /* 클릭 감각 강화 원하면 다음 줄 주석 해제
+  transform: scale(0.985);
+  */
 }
 
+/* ========== 카드(우측 상세) ========== */
 .sponsor-card {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0px 30px;
+  margin: 0 30px;
   height: 100%;
 
   color: black;
   border-radius: 15px;
-  /* background-color: white; */
   background: rgba(255, 255, 255, 0.4);
 }
 
@@ -79,26 +109,50 @@
   font-family: ExtraBold;
   font-size: 18px;
 }
+
 .sponsor-addr {
   font-family: Regular;
-  font-size: 13px;  
+  font-size: 13px;
 }
+
 .sponsor-image {
   height: 120px;
   aspect-ratio: 253/108;
   border-radius: 8px;
-  overflow: hidden; /* 둥근 모서리 밖 내용 잘라냄 */
-  margin: 18px 0px;
-  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.4);  
+  overflow: hidden;
+  margin: 18px 0;
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.4);
 }
 .sponsor-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* 잘려도 비율 유지 */
-  -webkit-user-drag: none; /* 이미지 드래그 방지 */
+  object-fit: cover;
+  -webkit-user-drag: none;
 }
+
 .sponsor-link {
-  color: inherit;        
+  color: inherit;
   font-family: Regular;
-  font-size: 10px;    
+  font-size: 10px;
+}
+
+/* ========== 데스크톱에서 카드(상세) 더 크게 ========== */
+@media (min-width: 900px) {
+  .sponsor-card {
+    padding: 30px 34px; /* 카드 여백 확대 */
+  }
+  .sponsor-name {
+    font-size: 26px; /* 상호명 크기 확대 */
+  }
+  .sponsor-addr {
+    font-size: 17px; /* 주소 크기 확대 */
+  }
+  .sponsor-image {
+    height: 220px; /* 이미지 크기 확대 */
+    border-radius: 12px;
+    margin: 26px 0;
+  }
+  .sponsor-link {
+    font-size: 14px; /* 링크 글자 크기 확대 */
+  }
 }
