@@ -81,13 +81,16 @@
           }
       };
 
+      // 페이지 로드 시 ST MUSIC BAND 버튼에 active 적용
+      document.getElementById('st').classList.add('active');
+
       const list = document.querySelector('.sponsor-list');
       const card = document.getElementById('sponsor-card');
       
-      const nameEl = card.querySelector('.sponsor-name');
-      const addrEl = card.querySelector('.sponsor-addr');
-      const imgEl  = card.querySelector('.sponsor-image img');
-      const linkEl = card.querySelector('.sponsor-link');
+      const name_clicked = card.querySelector('.sponsor-name');
+      const addr_clicked = card.querySelector('.sponsor-addr');
+      const img_clicked  = card.querySelector('.sponsor-image img');
+      const link_clicked = card.querySelector('.sponsor-link');
 
       list.addEventListener('click', (e) => {
         const item_clicked = e.target.closest('.sponsor-item'); //사용자가 실제 클릭한 버튼

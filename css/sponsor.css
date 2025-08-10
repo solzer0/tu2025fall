@@ -69,9 +69,10 @@
   margin: 0px 30px;
   height: 100%;
 
+  color: black;
   border-radius: 15px;
   /* background-color: white; */
-  background: rgba(255, 255, 255, 0.39);
+  background: rgba(255, 255, 255, 0.4);
 }
 
 .sponsor-name {
