@@ -179,10 +179,24 @@ main {
   right: 0;
   overflow-y: auto; /*본문만 스크롤*/  
 }
+body.home main { /* 가로 세로 중앙 */
+  display: flex;             
+  align-items: center;       
+  justify-content: center;    
+}
+body.home main { /*드래그/선택 방지 */
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -webkit-touch-callout: none;
+}
+/* body.home .poster-section img {
+  -webkit-user-drag: none;    
+  user-drag: none;
+} */
 
 /* 🔹 실제 포스터 보여줄 영역 */
 .poster-section {
-  margin: 1rem auto;
   max-width: 600px;
   padding: 1rem;
   z-index: 0;
