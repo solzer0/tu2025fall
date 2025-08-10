@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ABOUT | TURAMI</title>
+    <!-- 프로젝트 구조에 맞춰 경로 유지 -->
     <link rel="stylesheet" href="../main.css" />
     <link rel="stylesheet" href="../css/about.css" />
   </head>
@@ -44,9 +45,14 @@
 
         <div class="content-box">
           <div class="tab-content">
+            <!-- 공연 정보 -->
             <div class="tab-pane active" id="info">
               <div class="content1">
-                <img src="../images/poster.png" id="tab-poster" />
+                <img
+                  src="../images/poster.png"
+                  id="tab-poster"
+                  alt="TURAMI 포스터"
+                />
                 <div class="info-text1">
                   <p><strong>기획</strong> | 뚜라미</p>
                   <p><strong>연출</strong> | 박지윤 옥민준 이우준</p>
@@ -70,30 +76,23 @@
               </div>
             </div>
 
+            <!-- 오시는 길 -->
             <div class="tab-pane" id="location">
               <div class="content2">
-                <!-- ✅ 카카오맵을 감싸는 div 추가 -->
-                <div class="kakao-map-wrapper">
+                <!-- ✅ 반응형 컨테이너(폭만 제어). 지연 렌더링용 ID 부여 -->
+                <div class="kakao-map-wrapper" id="kakao-map-wrap">
                   <div
                     id="daumRoughmapContainer1753927748378"
                     class="root_daum_roughmap root_daum_roughmap_landing"
                   ></div>
                 </div>
 
-                <!-- 설치 스크립트 (그대로 유지) -->
+                <!-- roughmap 로더(렌더는 about.js에서 탭 유입 시 실행) -->
                 <script
                   charset="UTF-8"
                   class="daum_roughmap_loader_script"
                   src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"
                 ></script>
-
-                <!-- ✅ mapWidth, mapHeight 제거 -->
-                <script charset="UTF-8">
-                  new daum.roughmap.Lander({
-                    timestamp: "1753927748378",
-                    key: "6jotfgszqdk",
-                  }).render();
-                </script>
 
                 <div class="content2-1">
                   일시 | 9월 6일 토요일 오후 6시<br />
@@ -102,6 +101,7 @@
               </div>
             </div>
 
+            <!-- 주의사항 -->
             <div class="tab-pane" id="notice">
               <div class="content3">
                 <strong>1. 공연장 질서 유지</strong><br />
