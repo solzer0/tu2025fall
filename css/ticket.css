@@ -1,0 +1,76 @@
+@font-face {
+  font-family: "Bold";
+  src: url(../fonts/SUIT-Bold.otf) format("opentype");
+}
+@font-face {
+  font-family: "ExtraBold";
+  src: url(../fonts/SUIT-ExtraBold.otf) format("opentype");
+}
+@font-face {
+  font-family: "Regular";
+  src: url(../fonts/SUIT-Regular.otf) format("opentype");
+}
+
+main {
+    display: flex;  
+    flex-direction: column;
+         
+    align-items: center;       
+    justify-content: center;    
+}
+
+a {
+    color: inherit;           /* 부모 요소 글자색 상속 */
+    text-decoration: none;    /* 밑줄 제거 */
+}
+
+.ticket-card {
+    width: 250px;
+    height: 85px;
+    margin: 15px;
+    border-radius: 8px;
+    background: rgba(22, 88, 193, 0.39);
+    color: #FFF;
+    text-align: center;
+    font-family: "ExtraBold";
+    font-size: 14px;
+}
+
+.ticket-kind {
+    display: flex;            
+    align-items: center;        
+    justify-content: center; 
+
+    width: 100%;
+    height: 33px;
+    border-radius: 8px;
+    background: #1658C1; 
+}
+.ticket-info {
+    font-family: "Regular";
+    font-size: 12px;
+    font-weight: 500;
+}
+.ticket-card:nth-of-type(1) .ticket-info {
+    padding-top: 9.5px; 
+}
+.ticket-card:nth-of-type(2) .ticket-info {
+    padding-top: 17.5px; 
+}
+
+.recruit-card {
+    display: flex;            
+    align-items: center;        
+    justify-content: center; 
+
+    width: 250px;
+    height: 33px;
+    margin: 15px;
+    border-radius: 8px;
+    background: #FFFFFF;
+
+    color: #1658C1;
+    text-align: center;
+    font-family: "ExtraBold";
+    font-size: 14px;
+}
