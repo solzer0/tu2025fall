@@ -2,7 +2,6 @@
   font-family: "Bold";
   src: url(../fonts/SUIT-Bold.otf) format("opentype");
 }
-
 @font-face {
   font-family: "Regular";
   src: url(../fonts/SUIT-Regular.otf) format("opentype");
@@ -28,17 +27,17 @@ body {
   padding: 1rem;
 }
 
+/* 탭 */
 .tabs {
   display: flex;
   justify-content: space-around;
   margin-bottom: 1rem;
   border-radius: 30px;
   overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(22, 88, 193, 0.4);
   backdrop-filter: blur(5px);
   color: white;
 }
-
 .tab {
   flex: 1;
   text-align: center;
@@ -50,11 +49,11 @@ body {
   color: white;
   border-radius: 30px;
 }
-
 .tab.active {
-  background-color: black;
+  background-color: #1658c1;
 }
 
+/* 카드 */
 .content-box {
   background-color: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(10px);
@@ -64,17 +63,20 @@ body {
   height: auto;
   max-height: calc(100vh - 180px); /* 탭 높이 + 여백 고려 */
   overflow-y: auto;
+  overflow-x: hidden; /* ✅ 가로 스크롤 방지 */
   box-sizing: border-box;
+  color: #000; /* 본문 기본 텍스트는 검정 */
 }
 
+/* 탭 패널 */
 .tab-content > .tab-pane {
   display: none;
 }
-
 .tab-content > .tab-pane.active {
   display: block;
 }
 
+/* 공연 정보 */
 .content1 {
   display: flex;
   flex-direction: row;
@@ -82,31 +84,27 @@ body {
   gap: 1.5rem;
   flex-wrap: wrap;
 }
-
 #tab-poster {
   width: 200px;
   border-radius: 14px;
   flex-shrink: 0;
 }
-
 .info-text1 {
   flex: 1;
   word-break: keep-all;
 }
-
 .info-text1 p {
   margin: 0.3rem 0;
   font-size: 1rem;
   line-height: 1.4;
 }
-
 .content1-1,
 .content2-1 {
   margin-top: 1.5rem;
   line-height: 1.6;
 }
 
-/* ✅ 오시는 길 탭 중앙 정렬 */
+/* 오시는 길 */
 .content2 {
   text-align: center;
   display: flex;
@@ -115,36 +113,61 @@ body {
   gap: 1rem;
   line-height: 1.6;
 }
-
 .content3 {
   line-height: 1.6;
 }
 
-/* ✅ 카카오맵 wrapper 스타일 */
-.kakao-map-wrapper {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  max-width: 640px;
-  aspect-ratio: 16 / 9;
-  margin: 0 auto;
-  border-radius: 16px;
-  overflow: hidden;
+/* ✅ content 영역 텍스트 색상 통일 */
+.content-box,
+.content-box p,
+.content-box li,
+.content-box strong,
+.content-box em,
+.content-box h1,
+.content-box h2,
+.content-box h3,
+.content-box h4,
+.content-box h5,
+.content-box h6 {
+  color: #000;
+}
+.content-box a,
+.content-box a:visited {
+  color: #000;
+  text-decoration: underline;
+}
+.content-box a:hover,
+.content-box a:focus {
+  opacity: 0.85;
+  text-decoration: underline;
 }
 
-/* ✅ 모바일 반응형 조정 */
+/* ✅ 카카오맵: roughmap과 충돌 방지 */
+.kakao-map-wrapper {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  overflow-x: hidden; /* ✅ 내부 미세 오버런 방지 */
+}
+.kakao-map-wrapper .root_daum_roughmap,
+.kakao-map-wrapper .wrap_map {
+  border-radius: 16px;
+  overflow: hidden; /* 외부 잘림 방지 */
+  box-sizing: border-box;
+  max-width: 100% !important; /* ✅ 부모보다 커지지 않도록 */
+}
+
+/* 모바일 */
 @media (max-width: 600px) {
   .about-container {
     margin-top: 1rem;
     padding: 0.5rem;
     max-width: 95%;
   }
-
   .tabs {
     margin: 0 auto 1rem;
     width: 100%;
   }
-
   .tab {
     padding: 0.6rem 0;
     font-size: 0.85rem;
@@ -172,16 +195,20 @@ body {
 
   .info-text1 p,
   .content1-1,
-  .content2-1,
   .content3 {
     font-size: min(3vw, 0.95rem);
     word-break: keep-all;
   }
 
+  /* ✅ 오시는 길 문구는 줄바꿈 허용(가로 스크롤 방지) */
+  .content2-1 {
+    font-size: min(3vw, 0.95rem);
+    word-break: normal;
+    overflow-wrap: anywhere;
+  }
+
   .kakao-map-wrapper {
     max-width: 100%;
-    aspect-ratio: 4 / 3;
-    border-radius: 30px;
   }
 }
 
@@ -191,8 +218,16 @@ body {
   border-radius: 12px;
 }
 
-/* 카카오 지도 자동 추가 텍스트 제거 */
+/* 카카오 지도 자동 추가 텍스트/패널 제거 */
 #daumRoughmapContainer1753927748378 .wrap_controllers,
 #daumRoughmapContainer1753927748378 .wrap_map > div:last-child {
+  display: none !important;
+}
+/* ✅ 지도 아래 붙는 '주소/전화' 정보 패널 숨김 */
+#daumRoughmapContainer1753927748378 .wrap_map ~ * {
+  display: none !important;
+}
+/* (백업) 템플릿 변동 대비 */
+#daumRoughmapContainer1753927748378 dl {
   display: none !important;
 }
