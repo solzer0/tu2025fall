@@ -41,8 +41,9 @@
   height: 39px;
   width: 108px;
   background-color: #1658c1;
-  font-family: "Bold";
+  font-family: "Regular";
   font-size: 15px;
+  font-weight: 600;
   border-radius: 19.333px;
 }
 
