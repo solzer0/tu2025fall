@@ -35,99 +35,77 @@
     </nav>
 
     <main>
+      <div class="sponsor-box">
         <div class="sponsor-list">
-            <button class="sponsor-item st" id="st">
-                <span class="sponsor-name">ST MUSIC BAND</span>
-            </button>
-            <button class="sponsor-item first" id="first">
-                <span class="sponsor-name">퍼스트 삼성 안과</span>
-            </button>
-            <button class="sponsor-item rockzip" id="rockzip">
-                <span class="sponsor-name">록집 (ROCKZIP)</span>
-            </button>
-            <button class="sponsor-item nadeul" id="nadeul">
-                <span class="sponsor-name">나들목</span>
-            </button>
+          <button class="sponsor-item st" id="st">ST MUSIC BAND</button>
+          <button class="sponsor-item first" id="first">퍼스트 삼성 안과</button>
+          <button class="sponsor-item rockzip" id="rockzip">록집 (ROCKZIP)</button>
+          <button class="sponsor-item nadeul" id="nadeul">나들목</button>
         </div>
 
-        <section class="sponsor-detail" id="sponsor-detail" hidden>
-            <h2 class="sponsor-name"></h2>
-            <p class="sponsor-addr"></p>
-            <div class="sponsor-image"><img alt="" /></div>
-            <a class="sponsor-link" href="..." target="_blank" rel="noopener noreferrer">링크열기</a>
+        <section class="sponsor-card" id="sponsor-card">
+          <h2 class="sponsor-name">ST MUSIC BAND</h2>
+          <p class="sponsor-addr">(서울 마포구 와우산로29길 54)</p>
+          <div class="sponsor-image"><img src='../images/StMusicBand.png' /></div>
+          <a class="sponsor-link" href='https://naver.me/FTXwq1T8' target="_blank" rel="noopener noreferrer">링크열기</a>
         </section>
+      </div>
     </main>
 
 
     <script>
-    const SPONSORS_DATA = {
-        st: {
-        name: 'ST MUSIC BAND',
-        addr: '(서울 마포구 와우산로29길 54)',
-        hero: './images/sponsor/st-hero.jpg',
-        link: 'https://naver.me/st-music-band'
-        },
-        fest: {
-        name: '페스트 삼성 안과',
-        addr: '(주소 예시)',
-        hero: './images/sponsor/fest-hero.jpg',
-        link: 'https://example.com/fest'
-        },
-        rockzip: {
-        name: '록집 (ROCKZIP)',
-        addr: '(주소 예시)',
-        hero: './images/sponsor/rockzip-hero.jpg',
-        link: 'https://example.com/rockzip'
-        },
-        nabok: {
-        name: '나복',
-        addr: '(주소 예시)',
-        hero: './images/sponsor/nabok-hero.jpg',
-        link: 'https://example.com/nabok'
-        }
-    };
+      const SPONSORS_DATA = {
+          st: {
+              name: 'ST MUSIC BAND',
+              addr: '(서울 마포구 와우산로29길 54)',
+              hero: '../images/StMusicBand.png',
+              link: 'https://naver.me/FTXwq1T8'
+          },
+          first: {
+              name: '퍼스트 삼성 안과',
+              addr: '(주소 예시)',
+              hero: '../images/퍼스트삼성안과.png',
+              link: 'https://naver.me/53lIeuYM'
+          },
+          rockzip: {
+              name: '록집 (ROCKZIP)',
+              addr: '(주소 예시)',
+              hero: '../images/록집.png',
+              link: 'https://naver.me/xJiB7zsA'
+          },
+          nadeul: {
+              name: '나들목',
+              addr: '(주소 예시)',
+              hero: '../images/나들목.png',
+              link: 'https://naver.me/IGJyAnZc'
+          }
+      };
 
-    const grid = document.querySelector('.sponsor-grid');
-    const detail = document.getElementById('sponsor-detail');
-    const nameEl = detail.querySelector('.sponsor-detail__name');
-    const addrEl = detail.querySelector('.sponsor-detail__addr');
-    const imgEl  = detail.querySelector('.sponsor-hero img');
-    const linkEl = detail.querySelector('.sponsor-link');
+      const list = document.querySelector('.sponsor-list');
+      const card = document.getElementById('sponsor-card');
+      
+      const nameEl = card.querySelector('.sponsor-name');
+      const addrEl = card.querySelector('.sponsor-addr');
+      const imgEl  = card.querySelector('.sponsor-image img');
+      const linkEl = card.querySelector('.sponsor-link');
 
-    let currentId = null;
+      list.addEventListener('click', (e) => {
+        const item_clicked = e.target.closest('.sponsor-item'); //사용자가 실제 클릭한 버튼
+        if (!item_clicked) return;
 
-    grid.addEventListener('click', (e) => {
-        const btn = e.target.closest('.sponsor-card');
-        if (!btn) return;
+        // clicked 되었음을 표시
+        document.querySelectorAll('.sponsor-item').forEach(b => b.classList.remove('active'));
+        item_clicked.classList.add('active');
 
-        const id = btn.dataset.id;
-        const data = SPONSORS_DATA[id];
-        if (!data) return;
+        const item_id = item_clicked.id; // "st", "first", "rockzip", "nadeul"
+        const sponsor_data = SPONSORS_DATA[item_id];
+        if (!sponsor_data) return;
 
-        // aria-expanded 상태 업데이트 (한 개만 true)
-        grid.querySelectorAll('.sponsor-card[aria-expanded="true"]')
-            .forEach(b => b.setAttribute('aria-expanded', 'false'));
-        btn.setAttribute('aria-expanded', 'true');
-
-        // 상세 카드 채우기
-        detail.classList.add('is-animating');
-        nameEl.textContent = data.name;
-        addrEl.textContent = data.addr;
-        imgEl.src = data.hero;
-        imgEl.alt = `${data.name} 이미지`;
-        linkEl.href = data.link;
-
-        // 보이기 + 스크롤
-        if (detail.hasAttribute('hidden')) detail.removeAttribute('hidden');
-
-        // 약간의 애니메이션 후 클래스 제거
-        setTimeout(() => detail.classList.remove('is-animating'), 150);
-
-        // 그리드 바로 아래로 스크롤(모바일 편의)
-        detail.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-        currentId = id;
-    });
+        name_clicked.textContent = sponsor_data.name;
+        addr_clicked.textContent = sponsor_data.addr;
+        img_clicked.src = sponsor_data.hero;
+        link_clicked.href = sponsor_data.link;
+      });
     </script>
         
 
