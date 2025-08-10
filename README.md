@@ -17,8 +17,8 @@
 | `about-page`   | `about.html`, `about.css`       | 신한영         |
 | `setlist-page` | `setlist.html`, `setlist.css`   | 김윤성         |
 | `members-page` | `members.html`, `members.css`   | 장민주         |
-| `ticket-page`  | `ticket.html`, `ticket.css`     | (미정)         |
-| `sponsor-page` | `sponsor.html`, `sponsor.css`   | (미정)         |
+| `ticket-page`  | `ticket.html`, `ticket.css`     | 장민주        |
+| `sponsor-page` | `sponsor.html`, `sponsor.css`   | 장민주         |
 
 ---
 
