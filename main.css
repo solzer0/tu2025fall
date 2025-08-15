@@ -1,6 +1,7 @@
 @font-face {
   font-family: "Bold";
   src: url(../tu2025fall/fonts/SUIT-Bold.otf) format("opentype");
+  font-weight: 800;
 }
 
 @font-face {
