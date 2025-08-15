@@ -40,7 +40,6 @@ a {
   border-radius: 8px;
   background: #1658c1;
   font-family: "Bold";
-  font-weight: 600;
 }
 
 .ticket-info {
@@ -70,7 +69,6 @@ a {
   text-align: center;
   font-family: "Bold";
   font-size: 14px;
-  font-weight: 700;
 }
 
 /* ✅ 계좌 부분만 밑줄 + 손바닥 커서 */
