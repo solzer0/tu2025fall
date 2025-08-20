@@ -217,9 +217,10 @@ body.home .poster-img {
   position: absolute;
   right: 20px;
   bottom: 15px;
-  color: #fff;
+  color: black;
   text-align: right;
   font-size: 14px;
+  font-weight: 700;
   line-height: 1.5;
   pointer-events: none;
   transition: opacity 0.2s ease;

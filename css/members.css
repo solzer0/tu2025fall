@@ -23,10 +23,10 @@
   display: flex; /*가로한줄 배치*/
   align-items: center; /*자식 요소들 세로 중앙 정렬*/
   height: 39px;
-  background: rgba(22, 88, 193, 0.39);
+  background: rgba(255, 255, 255, 0.6);
   border-radius: 19.333px;
 
-  color: white;
+  color: #1658c1;
   overflow: hidden; /*내부 콘텐츠가 넘칠 경우, 넘치는 부분은 잘라버림*/
   white-space: nowrap; /*줄바꿈 허용 안해*/
   text-overflow: ellipsis; /*텍스트가 넘칠 경우 말줄임표(...) 로 표시*/
@@ -40,7 +40,7 @@
   justify-content: center; /* 텍스트 가운데 정렬 (선택) */
   height: 39px;
   width: 108px;
-  background-color: #1658c1;
+  background-color: white;
   font-family: "Regular";
   font-size: 15px;
   font-weight: 600;
