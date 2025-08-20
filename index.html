@@ -14,20 +14,16 @@
   </head>
   <body class="home">
     <div class="poster-bg"></div>
-
     <header>
       <div class="header-wrapper">
         <h1 class="logo">TURAMI</h1>
         <button class="menu-toggle" id="menu-toggle" aria-label="메뉴 열기">
-          <span class="bar"></span>
-          <span class="bar"></span>
+          <span class="bar"></span> <span class="bar"></span>
           <span class="bar"></span>
         </button>
       </div>
     </header>
-
     <div class="menu-cover"></div>
-
     <nav class="menu" id="menu" aria-label="사이트 메뉴">
       <ul>
         <li><a href="./index.html">HOME</a></li>
@@ -38,10 +34,9 @@
         <li><a href="./html/sponsor.html">SPONSOR</a></li>
       </ul>
     </nav>
-
     <main>
       <section class="poster-section">
-        <!-- 트리거: 데스크톱=호버, 모바일/터치=클릭 토글 -->
+        <!-- 데스크톱=호버, 모바일/터치=탭 토글 -->
         <div
           class="poster-wrap"
           id="home-hero"
@@ -53,8 +48,6 @@
         >
           <img class="poster-img" src="./images/poster.png" alt="공연 포스터" />
           <span class="poster-hint">클릭하여<br />세부정보 확인</span>
-
-          <!-- 투명 오버레이: 항상 포스터 내부로 클리핑 -->
           <div
             class="hero-overlay"
             id="hero-overlay"
@@ -62,17 +55,14 @@
             aria-modal="true"
             aria-hidden="true"
           >
-            <!-- 내용 폭과 간격을 관리하는 컨테이너(배경 없음) -->
             <div class="hero-card" aria-label="TURAMI 링크">
               <div class="hero-logo">
                 <img src="./images/turami_logo.png" alt="TURAMI 로고" />
               </div>
-
               <p class="hero-desc">
                 홍익대학교 중앙 창작곡 밴드 동아리 ‘뚜라미’<br />
                 2025년도 정기 가을공연 &lt;Free Bird&gt;
               </p>
-
               <div class="btn-list">
                 <a
                   class="btn btn-yt"
@@ -108,45 +98,58 @@
         </div>
       </section>
     </main>
-
     <footer>
       <p>Copyright(c) 2025 TURAMI, Hongik University. ALL RIGHTS RESERVED.</p>
     </footer>
-
     <!-- 헤더 전용 스크립트 -->
     <script src="./js/header.js"></script>
-
-    <!-- 터치 환경에서만 클릭으로 토글 (데스크톱은 hover로 동작) -->
+    <!-- 터치 robust 토글 -->
     <script>
       (function () {
         const wrap = document.getElementById("home-hero");
         if (!wrap) return;
-
         const overlay = wrap.querySelector("#hero-overlay");
         const firstBtn = wrap.querySelector(".btn-list .btn");
-        const isTouch = matchMedia("(hover: none)").matches;
-
+        const isTouchLike =
+          window.matchMedia("(hover: none)").matches ||
+          window.matchMedia("(pointer: coarse)").matches ||
+          "ontouchstart" in window ||
+          (navigator.maxTouchPoints && navigator.maxTouchPoints > 0);
         const open = () => {
-          wrap.classList.add("is-open");
+          wrap.classList.add("is-open", "hide-hint");
           overlay.setAttribute("aria-hidden", "false");
           wrap.setAttribute("aria-expanded", "true");
-          // 모바일에서도 힌트 텍스트 즉시 숨김
-          wrap.classList.add("hide-hint");
           setTimeout(() => firstBtn && firstBtn.focus(), 0);
         };
         const close = () => {
-          wrap.classList.remove("is-open");
+          wrap.classList.remove("is-open", "hide-hint");
           overlay.setAttribute("aria-hidden", "true");
           wrap.setAttribute("aria-expanded", "false");
-          wrap.classList.remove("hide-hint");
-          wrap.focus();
         };
-
-        if (isTouch) {
+        const toggle = () =>
+          wrap.classList.contains("is-open") ? close() : open();
+        if (isTouchLike) {
+          let touched = false;
+          wrap.addEventListener(
+            "touchend",
+            (e) => {
+              if (e.target.closest(".hero-card") && e.target.tagName === "A")
+                return;
+              touched = true;
+              e.preventDefault();
+              toggle();
+              setTimeout(() => (touched = false), 400);
+            },
+            { passive: false }
+          );
           wrap.addEventListener("click", (e) => {
-            const insideContent = e.target.closest(".hero-card");
-            if (insideContent && e.target.tagName === "A") return; // 링크 클릭은 토글 무시
-            wrap.classList.contains("is-open") ? close() : open();
+            if (touched) return;
+            if (e.target.closest(".hero-card") && e.target.tagName === "A")
+              return;
+            toggle();
+          });
+          overlay.addEventListener("click", (e) => {
+            if (e.target === overlay) close();
           });
           document.addEventListener("keydown", (e) => {
             if (e.key === "Escape" && wrap.classList.contains("is-open"))

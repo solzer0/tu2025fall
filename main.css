@@ -1,10 +1,14 @@
 @font-face {
+  font-family: "ExtraBold";
+  src: url(./tu2025fall/fonts/SUIT-ExtraBold.otf) format("opentype");
+}
+@font-face {
   font-family: "Bold";
-  src: url(./fonts/SUIT-Bold.otf) format("opentype");
+  src: url(./tu2025fall/fonts/SUIT-Bold.otf) format("opentype");
 }
 @font-face {
   font-family: "Regular";
-  src: url(./fonts/SUIT-Regular.otf) format("opentype");
+  src: url(./tu2025fall/fonts/SUIT-Regular.otf) format("opentype");
 }
 
 * {
@@ -27,7 +31,7 @@ body {
   color: #1658c1;
 }
 
-/* 배경 블러 포스터 */
+/* 흐린 배경 */
 .poster-bg {
   position: fixed;
   inset: 0;
@@ -58,14 +62,13 @@ header {
 }
 .logo {
   font-size: 1.5rem;
-  font-family: "Bold";
-  font-weight: 800;
+  font-family: "ExtraBold";
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
 }
 
-/* 햄버거 버튼 */
+/* 메뉴 */
 .menu-toggle {
   position: absolute;
   right: 1.3rem;
@@ -87,7 +90,6 @@ header {
   border-radius: 25px;
 }
 
-/* 메뉴 */
 .menu-cover {
   position: fixed;
   top: 30px;
@@ -140,7 +142,9 @@ header {
   font-size: 1.2rem;
 }
 
-/* 본문 */
+/* ============================= */
+/* 기본(main) 레이아웃: 공통 규칙 */
+/* ============================= */
 main {
   position: absolute;
   top: 60px;
@@ -149,42 +153,66 @@ main {
   right: 0;
   overflow-y: auto;
   z-index: 0;
-  user-select: none;
-  -webkit-touch-callout: none;
 }
+
+/* ============================= */
+/* 홈(index) 전용 레이아웃       */
+/* ============================= */
+:root {
+  /* 홈 포스터 상하 여백(기본) */
+  --home-vertical-gap: clamp(28px, 5vh, 64px);
+}
+@media (min-width: 1024px) {
+  /* 데스크톱은 여백 더 크게 → 헤더/푸터에 닿는 느낌 제거 */
+  :root {
+    --home-vertical-gap: clamp(56px, 9vh, 96px);
+  }
+}
+
 body.home main {
+  position: fixed; /* 홈에서만 고정 레이아웃 */
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  padding-block: var(--home-vertical-gap);
 }
 
-/* ===================== */
-/* 포스터 섹션 (최종본)  */
-/* ===================== */
-.poster-section {
-  max-width: 600px;
-  padding: 1rem;
+/* 포스터 영역 (데스크톱 최대폭을 더 줄임) */
+body.home .poster-section {
+  width: min(92vw, 560px);
+  padding: 0 1rem;
+}
+@media (min-width: 1280px) {
+  body.home .poster-section {
+    width: min(88vw, 520px);
+  } /* 아주 넓은 화면에서 더 작게 */
 }
 
-/* 포스터 래퍼: 내부 콘텐츠가 절대 밖으로 안 나가도록 클리핑 */
-.poster-wrap {
+body.home .poster-wrap {
   position: relative;
-  display: inline-block;
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
-
+  width: 100%;
+  /* 컨테이너 높이를 안전하게 더 줄여 항상 여백 확보 */
+  max-height: calc(100% - (var(--home-vertical-gap) * 2) - 32px);
   overflow: hidden;
   border-radius: 12px;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
 }
-.poster-img {
-  display: block;
+
+body.home .poster-img {
   width: 100%;
   height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* 비율 유지 + 과확대 금지 */
   border-radius: 12px;
   transition: filter 0.22s ease;
 }
 
-/* 힌트 텍스트 */
+/* 힌트 */
 .poster-hint {
   position: absolute;
   right: 20px;
@@ -194,56 +222,47 @@ body.home main {
   font-size: 14px;
   line-height: 1.5;
   pointer-events: none;
-  user-select: none;
   transition: opacity 0.2s ease;
 }
 
-/* 투명 오버레이(콘텐츠만 표시) */
+/* 오버레이/카드 */
 .hero-overlay {
   position: absolute;
   inset: 0;
   display: grid;
-  place-items: center; /* 모든 화면에서 정확히 중앙 정렬 */
-  padding: clamp(10px, 3vw, 24px); /* 가장자리 여백은 반응형 */
+  place-items: center;
+  padding: clamp(10px, 3vw, 24px);
   box-sizing: border-box;
-
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.25s ease;
 }
 
-/* 내용 컨테이너: 배경 없음, 폭과 간격을 반응형으로 제어 */
-.hero-card {
-  width: min(420px, 100%); /* 포스터 폭 초과 금지 */
+/* 카드 폭을 포스터 대비 더 여유 있게 줄임 */
+body.home .hero-card {
+  width: clamp(340px, 90%, 500px);
   max-width: 100%;
-
-  /* 요소 간 간격을 clamp로 반응형 조절 */
-  --gap: clamp(8px, 2.5vw, 16px);
-  --logo-size: clamp(120px, 26vw, 180px);
-  --btn-height: clamp(40px, 6vw, 48px);
+  --gap: clamp(12px, 3vw, 20px);
+  --logo-size: clamp(120px, 26vw, 170px);
+  --btn-height: clamp(40px, 6vw, 50px);
   --btn-radius: clamp(10px, 2.4vw, 12px);
-
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  align-items: center;
   gap: var(--gap);
-
   transform: translateY(6px);
   opacity: 0;
   transition: transform 0.28s ease, opacity 0.28s ease;
 }
-
-/* 로고/텍스트/버튼 */
 .hero-logo {
   display: flex;
   justify-content: center;
 }
 .hero-logo img {
   width: var(--logo-size);
-  max-width: 150px;
-  height: 100%;
+  height: auto;
+  max-width: 170px;
 }
-
 .hero-desc {
   font-family: "Regular";
   font-size: clamp(12.5px, 2.7vw, 14px);
@@ -253,12 +272,15 @@ body.home main {
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
 }
 
+/* 버튼 */
 .btn-list {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: var(--gap);
 }
 .btn {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -271,78 +293,65 @@ body.home main {
   outline: none;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
   transition: transform 0.06s ease, filter 0.2s ease, box-shadow 0.2s ease;
-
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-  word-break: keep-all;
-  white-space: normal; /* 긴 문구도 폭 안에서 줄바꿈 */
   text-align: center;
+  word-break: keep-all;
 }
-.btn:hover {
-  filter: brightness(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-.btn:active {
-  transform: translateY(1px) scale(0.995);
-}
-.btn:focus-visible {
-  outline: 2px solid rgba(255, 255, 255, 0.9);
-  outline-offset: 2px;
-}
-
-/* 버튼 색상 */
 .btn-yt {
   background: #ff0000;
-  color: #ffffff;
+  color: #fff;
 }
 .btn-ig {
-  color: #ffffff;
+  color: #fff;
   background: linear-gradient(135deg, #f9ce34 0%, #ee2a7b 50%, #6228d7 100%);
 }
 .btn-video {
-  background: #ffffff;
+  background: #fff;
   color: #1658c1;
 }
 
-/* 데스크톱: 호버 중에만 표시 + 힌트 숨김 */
+/* 데스크톱 호버 */
 @media (hover: hover) and (pointer: fine) {
-  .poster-wrap:hover .poster-img {
+  body.home .poster-wrap:hover .poster-img {
     filter: brightness(0.35);
   }
-  .poster-wrap:hover .hero-overlay {
+  body.home .poster-wrap:hover .hero-overlay {
     opacity: 1;
     pointer-events: auto;
   }
-  .poster-wrap:hover .hero-card {
+  body.home .poster-wrap:hover .hero-card {
     opacity: 1;
     transform: translateY(0);
   }
-  .poster-wrap:hover .poster-hint {
+  body.home .poster-wrap:hover .poster-hint {
     opacity: 0;
   }
 }
 
-/* 모바일/터치: 클릭 토글 + 힌트 숨김 */
-.poster-wrap.is-open .poster-img {
+/* 모바일 토글 */
+body.home .poster-wrap.is-open .poster-img {
   filter: brightness(0.35);
 }
-.poster-wrap.is-open .hero-overlay {
+body.home .poster-wrap.is-open .hero-overlay {
   opacity: 1;
   pointer-events: auto;
 }
-.poster-wrap.is-open .hero-card {
+body.home .poster-wrap.is-open .hero-card {
   opacity: 1;
   transform: translateY(0);
 }
-.poster-wrap.hide-hint .poster-hint {
+body.home .poster-wrap.hide-hint .poster-hint {
   opacity: 0;
 }
 
-/* 데스크톱에서 약간 더 여유 있는 폭(기존 패널 시절과 유사) */
-@media (min-width: 900px) {
-  .hero-card {
-    width: min(420px, 100%);
+/* 초소형: 버튼 한 줄 유지 */
+@media (max-width: 600px) {
+  body.home .btn {
+    white-space: nowrap;
+  }
+  @media (max-width: 360px) {
+    body.home .btn {
+      font-size: 13px;
+    }
   }
 }
 
