@@ -50,6 +50,7 @@
 .desc {
   font-family: "Regular";
   font-size: 12px;
+  color: black;
   text-overflow: ellipsis;
   flex-grow: 1; /*🔹 남는 공간 다 차지*/
 }
