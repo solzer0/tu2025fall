@@ -1,3 +1,33 @@
+@media (max-width: 600px) {
+  .setlist-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .setlist-left,
+  .setlist-right {
+    width: 100%;
+  }
+
+  .song-lyrics-scroll {
+    max-height: 30vh; /* 모바일에서는 가사 높이를 줄여야 스크롤이 자연스러움 */
+  }
+
+  .setlist-tabs {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  .setlist-tabs .tab {
+    font-size: 0.9rem;
+    padding: 0.6rem 0;
+  }
+
+  .song-list li {
+    font-size: 0.85rem;
+  }
+}
 @font-face {
   font-family: "Bold";
   src: url(../fonts/SUIT-Bold.otf) format("opentype");
@@ -25,9 +55,6 @@ main.setlist-page {
   gap: 1.5rem;
   width: 100%;
   max-width: 900px;
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(10px);
-  border-radius: 30px;
   padding: 2rem;
 }
 .setlist-tabs {
