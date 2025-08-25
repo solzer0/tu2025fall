@@ -1,6 +1,36 @@
 const songs = [
    // --- Part 1 ---
   {
+    title: "Far Away",
+    part: "1",
+    meta: "원곡 | 라쿠나\n참여 | 옥민준(V,G2) 유수민(G1) 조아름(B) 오다연(D)",
+    lyrics: "가사 내용 1..."
+  },
+  {
+    title: "날씨의 요정",
+    part: "1",
+    meta: "원곡 | 신인류\n참여 | 박지윤(V) 구연성(G1) 유수민(G2) 김예은(B) 조민재(D) 김수민(K1) 이서윤(K2)",
+    lyrics: "가사 내용 2..."
+  },
+  {
+    title: "I don't like",
+    part: "1",
+    meta: "작곡 | 손윤성\n참여 | 선율(V) 오명(G1) 구연성(G2) 신한영(B) 김채영(D) 김다영(K1) 설수민(K2) 이민규(Chorus)",
+    lyrics: "가사 내용 3..."
+  },
+  {
+    title: "친애하는 소년이여",
+    part: "1",
+    meta: "원곡 | Hump Back\n참여 | 정예은(V) 서범석(G1) 유수민(G2) 장희수(B) 부경민(D)",
+    lyrics: "가사 내용 4..."
+  },
+  {
+    title: "제비",
+    part: "1",
+    meta: "작곡 | 강민혜\n참여 | 이우준(V) 구연성(G) 최종윤(B) 조은비(D) 이재민(K)",
+    lyrics: "가사 내용 5..."
+  },
+  {
     title: "Jesus lived in a motel room",
     part: "1",
     meta: "원곡 | 혁오\n참여 | 문민기(V) 임경재(G) 조아름(B) 임채은(D)",
@@ -114,76 +144,48 @@ Then Oye yells
 `
   },
   {
-    title: "Far Away",
+    title: "Valentine's Eve",
     part: "1",
-    meta: "원곡 | 라쿠나\n참여 | 옥민준(V,G2) 유수민(G1) 조아름(B) 오다연(D)",
-    lyrics: "가사 내용 2..."
-  },
-  {
-    title: "ベテルギウス (베텔기우스)",
-    part: "1",
-    meta: "원곡 | 優里(유우리)\n참여 | 방민서(V) 김동현(AG) 정대현(EG1) 임경재(EG2) 김예은(B) 조은비(D) 설수민(K)",
-    lyrics: "가사 내용 3..."
-  },
-  {
-    title: "ブレーメン (브레멘)",
-    part: "1",
-    meta: "원곡 | ヨルシカ(요루시카)\n참여 | 선율(V) 오명(G1) 구연성(G2) 신한영(B) 김채영(D) 김다영(K1) 설수민(K2) 이민규(Chorus)",
-    lyrics: "가사 내용 4..."
-  },
-  {
-    title: "拝啓、少年よ(친애하는 소년이여)",
-    part: "1",
-    meta: "원곡 | Hump Back\n참여 | 정예은(V) 서범석(G1) 유수민(G2) 장희수(B) 부경민(D)",
-    lyrics: "가사 내용 5..."
-  },
-  {
-    title: "깊은 밤을 날아서",
-    part: "1",
-    meta: "원곡 | 이문세\n참여 | 이우준(V) 구연성(G) 최종윤(B) 조은비(D) 이재민(K)",
-    lyrics: "가사 내용 6..."
-  },
-  {
-    title: "전설",
-    part: "1",
-    meta: "원곡 | 잔나비\n참여 | 구연성(V) 김동현(AG) 정대현(EG1) 이우준(EG2) 유진(B) 김채영(D) 이제하(K1) 정홍준(K2)",
+    meta: "작곡 | 신승민\n참여 | 박지윤(V) 구연성(G1) 유수민(G2) 김예은(B) 조민재(D) 김수민(K1) 이서윤(K2)",
     lyrics: "가사 내용 7..."
+    
   },
   {
-    title: "날씨의 요정",
+    title: "행운을 부탁해",
     part: "1",
-    meta: "원곡 | 신인류\n참여 | 박지윤(V) 구연성(G1) 유수민(G2) 김예은(B) 조민재(D) 김수민(K1) 이서윤(K2)",
+    meta: "원곡 | 보라미유\n참여 | 박지윤(V) 구연성(G1) 유수민(G2) 김예은(B) 조민재(D) 김수민(K1) 이서윤(K2)",
     lyrics: "가사 내용 8..."
+    
   },
    // --- Part 2 ---
    {
-    title: "Jesus lived in a motel room",
+    title: "전설",
     part: "2",
-    meta: "원곡 | 혁오\n참여 | 문민기(V) 임경재(G) 조아름(B) 임채은(D)",
-    lyrics: `가사 내용 1...`
+    meta: "원곡 | 잔나비\n참여 | 구연성(V) 김동현(AG) 정대현(EG1) 이우준(EG2) 유진(B) 김채영(D) 이제하(K1) 정홍준(K2)",
+    lyrics: "가사 내용 1..."
   },
   {
-    title: "Far Away",
+    title: "Ch. 2",
     part: "2",
-    meta: "원곡 | 라쿠나\n참여 | 옥민준(V,G2) 유수민(G1) 조아름(B) 오다연(D)",
+    meta: "작곡 | 박지윤\n참여 | 옥민준(V,G2) 유수민(G1) 조아름(B) 오다연(D)",
     lyrics: "가사 내용 2..."
   },
   {
-    title: "ベテルギウス (베텔기우스)",
+    title: "Bremen",
     part: "2",
-    meta: "원곡 | 優里(유우리)\n참여 | 방민서(V) 김동현(AG) 정대현(EG1) 임경재(EG2) 김예은(B) 조은비(D) 설수민(K)",
+    meta: "원곡 | ヨルシカ(요루시카)\n참여 | 선율(V) 오명(G1) 구연성(G2) 신한영(B) 김채영(D) 김다영(K1) 설수민(K2) 이민규(Chorus)",
     lyrics: "가사 내용 3..."
   },
   {
-    title: "ブレーメン (브레멘)",
+    title: "아이 마네킹",
     part: "2",
-    meta: "원곡 | ヨルシカ(요루시카)\n참여 | 선율(V) 오명(G1) 구연성(G2) 신한영(B) 김채영(D) 김다영(K1) 설수민(K2) 이민규(Chorus)",
+    meta: "작곡 | 설수민\n참여 | 선율(V) 오명(G1) 구연성(G2) 신한영(B) 김채영(D) 김다영(K1) 설수민(K2) 이민규(Chorus)",
     lyrics: "가사 내용 4..."
   },
   {
-    title: "拝啓、少年よ(친애하는 소년이여)",
+    title: "내려놔",
     part: "2",
-    meta: "원곡 | Hump Back\n참여 | 정예은(V) 서범석(G1) 유수민(G2) 장희수(B) 부경민(D)",
+    meta: "작곡 | 이민규\n참여 | 정예은(V) 서범석(G1) 유수민(G2) 장희수(B) 부경민(D)",
     lyrics: "가사 내용 5..."
   },
   {
@@ -193,66 +195,90 @@ Then Oye yells
     lyrics: "가사 내용 6..."
   },
   {
-    title: "전설",
+    title: "BETELGEUSE",
     part: "2",
-    meta: "원곡 | 잔나비\n참여 | 구연성(V) 김동현(AG) 정대현(EG1) 이우준(EG2) 유진(B) 김채영(D) 이제하(K1) 정홍준(K2)",
+    meta: "원곡 | 優里(유우리)\n참여 | 방민서(V) 김동현(AG) 정대현(EG1) 임경재(EG2) 김예은(B) 조은비(D) 설수민(K)",
     lyrics: "가사 내용 7..."
   },
+  
   {
-    title: "날씨의 요정",
+    title: "???",
     part: "2",
-    meta: "원곡 | 신인류\n참여 | 박지윤(V) 구연성(G1) 유수민(G2) 김예은(B) 조민재(D) 김수민(K1) 이서윤(K2)",
+    meta: "원곡 | 유다빈밴드\n참여 | 박지윤(V) 구연성(G1) 유수민(G2) 김예은(B) 조민재(D) 김수민(K1) 이서윤(K2)",
     lyrics: "가사 내용 8..."
   },
 
 ];
+document.addEventListener("DOMContentLoaded", () => {
+  const songList = document.getElementById("songList");
+  const detailHeader = document.querySelector(".song-detail-header");
+  const lyricsBox = document.querySelector(".song-lyrics-scroll");
+  const tabs = document.querySelectorAll(".tab");
+  const divider = document.getElementById("songDivider");
 
-const songList = document.getElementById("songList");
-const detailHeader = document.querySelector(".song-detail-header");
-const lyricsBox = document.querySelector(".song-lyrics-scroll");
-const tabs = document.querySelectorAll(".tab");
-
-function renderSongs(part) {
-  songList.innerHTML = "";
-  songs
-    .filter(song => song.part === part)
-    .forEach(song => {
-      const li = document.createElement("li");
-      li.textContent = song.title;
-      li.addEventListener("click", () => {
-        const isOpen = detailHeader.textContent === song.title;
-        if (isOpen) {
-          detailHeader.innerHTML = "클릭하여 세부정보를 확인해주세요!<br />창을 다시 클릭하면 창이 닫힙니다.";
-          lyricsBox.innerHTML = "";
-        } else {
-          detailHeader.innerHTML = `<strong>${song.title}</strong><br><span style="font-size:0.85rem;">${song.meta.replaceAll("\n", "<br>")}</span>`;
-          lyricsBox.textContent = song.lyrics;
-        }
-      });
-      songList.appendChild(li);
-    });
-}
-
-// 탭 전환
-tabs.forEach(tab => {
-  tab.addEventListener("click", () => {
-    tabs.forEach(t => t.classList.remove("active"));
-    tab.classList.add("active");
-    renderSongs(tab.dataset.part);
-    detailHeader.innerHTML = "클릭하여 세부정보를 확인해주세요!<br />창을 다시 클릭하면 창이 닫힙니다.";
+  // 안내문(센터 정렬) 세팅 함수
+  function setDefaultDetailMessage() {
+    detailHeader.classList.add("centered"); // CSS에 .song-detail-header.centered 정의 필요
+    detailHeader.innerHTML = "클릭하여 세부 정보를 확인해주세요!<br />창을 다시 클릭하면 창이 닫힙니다.";
     lyricsBox.innerHTML = "";
+    if (divider) divider.style.display = "none";
+  }
+
+  function renderSongs(part) {
+    songList.innerHTML = "";
+
+    songs
+      .filter(song => song.part === part)
+      .forEach(song => {
+        const li = document.createElement("li");
+        li.textContent = song.title;
+        // 클릭 토글
+       li.addEventListener("click", () => {
+          const alreadyActive = li.classList.contains("active");
+          // 모두 비활성화
+          Array.from(songList.children).forEach(n => n.classList.remove("active"));
+          if (alreadyActive) {
+            // 접기
+            setDefaultDetailMessage();
+            return;
+          }
+          // 활성화
+          li.classList.add("active");
+          // 상세(좌측 정렬로 전환)
+          detailHeader.classList.remove("centered");
+          detailHeader.innerHTML = `
+            <strong>${song.title}</strong><br>
+            <span style="font-size:0.85rem;">${song.meta.replaceAll("\n", "<br>")}</span>
+          `;
+          // 구분선 + 가사 표시
+          if (divider) divider.style.display = "block";
+          lyricsBox.textContent = song.lyrics || "가사 정보가 없습니다.";
+        });
+
+        songList.appendChild(li);
+      });
+  }
+
+  // 탭 전환
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      tabs.forEach(t => t.classList.remove("active"));
+      tab.classList.add("active");
+      
+      renderSongs(tab.dataset.part);
+      setDefaultDetailMessage(); // 안내문 중앙 정렬 상태로 리셋
+    });
   });
+
+  // 곡 클릭 시 선택 표시
+  document.querySelectorAll('#songList li').forEach(n => n.classList.remove('active'));
+  li.classList.add('active');
+
+  // 초기 상태: 1부 탭 활성화 + 리스트 렌더 + 안내문
+  tabs.forEach(t => t.classList.remove("active"));
+  const firstTab = document.querySelector('.tab[data-part="1"]');
+  if (firstTab) firstTab.classList.add("active");
+  
+  renderSongs("1");
+  setDefaultDetailMessage();
 });
-// 곡 클릭 시 선택 표시
-document.querySelectorAll('#songList li').forEach(n => n.classList.remove('active'));
-li.classList.add('active');
-
-//참여 가사 구분선
-detailHeader.innerHTML = `
-  <strong>${song.title}</strong><br>
-  <span style="font-size:0.85rem;">${song.meta.replaceAll("\n", "<br>")}</span>
-  <div class="divider-line"></div>
-`;
-
-// 초기 로딩
-renderSongs("1");
