@@ -226,7 +226,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function renderSongs(part) {
     songList.innerHTML = "";
-
     songs
       .filter(song => song.part === part)
       .forEach(song => {
@@ -270,15 +269,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 곡 클릭 시 선택 표시
-  document.querySelectorAll('#songList li').forEach(n => n.classList.remove('active'));
-  li.classList.add('active');
-
   // 초기 상태: 1부 탭 활성화 + 리스트 렌더 + 안내문
   tabs.forEach(t => t.classList.remove("active"));
   const firstTab = document.querySelector('.tab[data-part="1"]');
   if (firstTab) firstTab.classList.add("active");
-  
+
   renderSongs("1");
   setDefaultDetailMessage();
 });

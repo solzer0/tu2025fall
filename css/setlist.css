@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Bold";
+  src: url(../fonts/SUIT-Bold.otf) format("opentype");
+}
+@font-face {
+  font-family: "Regular";
+  src: url(../fonts/SUIT-Regular.otf) format("opentype");
+}
 /* 공통색상 */
 :root{
   --blue: #1f52ff;
@@ -10,14 +18,6 @@
   --card-shadow: 0 10px 22px rgba(0,0,0,0.16);
   --active-shadow: 0 10px 20px rgba(31,82,255,0.35);
 }
-@font-face {
-  font-family: "Bold";
-  src: url(../fonts/SUIT-Bold.otf) format("opentype");
-}
-@font-face {
-  font-family: "Regular";
-  src: url(../fonts/SUIT-Regular.otf) format("opentype");
-}
 body {
   margin: 0;
   font-family: "Regular";
@@ -29,7 +29,6 @@ main.setlist-page {
   justify-content: center;
   align-items: start;
   padding: 2rem;
-  background: url('../images/poster.jpg') no-repeat center center / cover;
 }
 /* 탭(1부/2부) */
 .setlist-tabs{
@@ -135,6 +134,18 @@ main.setlist-page {
   width: 100%;
   max-width: 900px;
   padding: 2rem;
+}
+/* 좌/우 칼럼이 눈에 보이도록 최소 높이 확보 */
+.setlist-left,
+.setlist-right{
+  min-height: 60vh;
+}
+/* 오른쪽 카드가 ‘버블’처럼 작아지지 않도록 */
+.setlist-right{
+  background: #fff;
+  border-radius: 22px;
+  padding: 16px;
+  box-shadow: var(--card-shadow);
 }
 /* ===== 모바일 최적화 ===== */
 @media (max-width: 600px){
