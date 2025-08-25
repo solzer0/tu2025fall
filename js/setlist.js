@@ -243,6 +243,16 @@ tabs.forEach(tab => {
     lyricsBox.innerHTML = "";
   });
 });
+// 곡 클릭 시 선택 표시
+document.querySelectorAll('#songList li').forEach(n => n.classList.remove('active'));
+li.classList.add('active');
+
+//참여 가사 구분선
+detailHeader.innerHTML = `
+  <strong>${song.title}</strong><br>
+  <span style="font-size:0.85rem;">${song.meta.replaceAll("\n", "<br>")}</span>
+  <div class="divider-line"></div>
+`;
 
 // 초기 로딩
 renderSongs("1");
