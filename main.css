@@ -1,14 +1,14 @@
 @font-face {
   font-family: "ExtraBold";
-  src: url(/fonts/SUIT-ExtraBold.otf) format("opentype");
+  src: url(./fonts/SUIT-ExtraBold.otf) format("opentype");
 }
 @font-face {
   font-family: "Bold";
-  src: url(/fonts/SUIT-Bold.otf) format("opentype");
+  src: url(./fonts/SUIT-Bold.otf) format("opentype");
 }
 @font-face {
   font-family: "Regular";
-  src: url(/fonts/SUIT-Regular.otf) format("opentype");
+  src: url(./fonts/SUIT-Regular.otf) format("opentype");
 }
 
 * {
@@ -25,7 +25,6 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
-  font-family: "Bold";
   letter-spacing: 0.05em;
   background-color: #ffffff;
   color: #1658c1;
@@ -124,6 +123,7 @@ header {
   transform: translateY(-10px);
   pointer-events: none;
   transition: opacity 0.3s ease, transform 0.3s ease;
+  font-family: "Bold";
 }
 .menu.active {
   opacity: 1;

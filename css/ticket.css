@@ -45,6 +45,7 @@ a {
 .ticket-info {
   font-family: "Regular";
   font-size: 12px;
+  color: black;
 }
 
 /* 첫번째/두번째 카드 간 상단 여백 보정 */
