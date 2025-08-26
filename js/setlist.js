@@ -1,36 +1,42 @@
 const songs = [
    // --- Part 1 ---
   {
+    original: 0,
     title: "Far Away",
     part: "1",
     meta: "원곡 | 라쿠나\n참여 | 옥민준(V,G2) 유수민(G1) 조아름(B) 오다연(D)",
     lyrics: "가사 내용 1..."
   },
   {
+    original: 0,
     title: "날씨의 요정",
     part: "1",
     meta: "원곡 | 신인류\n참여 | 박지윤(V) 구연성(G1) 유수민(G2) 김예은(B) 조민재(D) 김수민(K1) 이서윤(K2)",
     lyrics: "가사 내용 2..."
   },
   {
+    original: 1,
     title: "I don't like",
     part: "1",
     meta: "작곡 | 손윤성\n참여 | 선율(V) 오명(G1) 구연성(G2) 신한영(B) 김채영(D) 김다영(K1) 설수민(K2) 이민규(Chorus)",
     lyrics: "가사 내용 3..."
   },
   {
+    original: 0,
     title: "친애하는 소년이여",
     part: "1",
     meta: "원곡 | Hump Back\n참여 | 정예은(V) 서범석(G1) 유수민(G2) 장희수(B) 부경민(D)",
     lyrics: "가사 내용 4..."
   },
   {
+    original: 1,
     title: "제비",
     part: "1",
     meta: "작곡 | 강민혜\n참여 | 이우준(V) 구연성(G) 최종윤(B) 조은비(D) 이재민(K)",
     lyrics: "가사 내용 5..."
   },
   {
+    original: 0,
     title: "Jesus lived in a motel room",
     part: "1",
     meta: "원곡 | 혁오\n참여 | 문민기(V) 임경재(G) 조아름(B) 임채은(D)",
@@ -144,6 +150,7 @@ Then Oye yells
 `
   },
   {
+    original: 1,
     title: "Valentine's Eve",
     part: "1",
     meta: "작곡 | 신승민\n참여 | 박지윤(V) 구연성(G1) 유수민(G2) 김예은(B) 조민재(D) 김수민(K1) 이서윤(K2)",
@@ -151,6 +158,7 @@ Then Oye yells
     
   },
   {
+    original: 0,
     title: "행운을 부탁해",
     part: "1",
     meta: "원곡 | 보라미유\n참여 | 박지윤(V) 구연성(G1) 유수민(G2) 김예은(B) 조민재(D) 김수민(K1) 이서윤(K2)",
@@ -159,42 +167,49 @@ Then Oye yells
   },
    // --- Part 2 ---
    {
+    original: 0,
     title: "전설",
     part: "2",
     meta: "원곡 | 잔나비\n참여 | 구연성(V) 김동현(AG) 정대현(EG1) 이우준(EG2) 유진(B) 김채영(D) 이제하(K1) 정홍준(K2)",
     lyrics: "가사 내용 1..."
   },
   {
+    original: 1,
     title: "Ch. 2",
     part: "2",
     meta: "작곡 | 박지윤\n참여 | 옥민준(V,G2) 유수민(G1) 조아름(B) 오다연(D)",
     lyrics: "가사 내용 2..."
   },
   {
+    original: 0,
     title: "Bremen",
     part: "2",
     meta: "원곡 | ヨルシカ(요루시카)\n참여 | 선율(V) 오명(G1) 구연성(G2) 신한영(B) 김채영(D) 김다영(K1) 설수민(K2) 이민규(Chorus)",
     lyrics: "가사 내용 3..."
   },
   {
+    original: 1,
     title: "아이 마네킹",
     part: "2",
     meta: "작곡 | 설수민\n참여 | 선율(V) 오명(G1) 구연성(G2) 신한영(B) 김채영(D) 김다영(K1) 설수민(K2) 이민규(Chorus)",
     lyrics: "가사 내용 4..."
   },
   {
+    original: 1,
     title: "내려놔",
     part: "2",
     meta: "작곡 | 이민규\n참여 | 정예은(V) 서범석(G1) 유수민(G2) 장희수(B) 부경민(D)",
     lyrics: "가사 내용 5..."
   },
   {
+    original: 0,
     title: "깊은 밤을 날아서",
     part: "2",
     meta: "원곡 | 이문세\n참여 | 이우준(V) 구연성(G) 최종윤(B) 조은비(D) 이재민(K)",
     lyrics: "가사 내용 6..."
   },
   {
+    original: 0,
     title: "BETELGEUSE",
     part: "2",
     meta: "원곡 | 優里(유우리)\n참여 | 방민서(V) 김동현(AG) 정대현(EG1) 임경재(EG2) 김예은(B) 조은비(D) 설수민(K)",
@@ -202,6 +217,7 @@ Then Oye yells
   },
   
   {
+    original: 0,
     title: "???",
     part: "2",
     meta: "원곡 | 유다빈밴드\n참여 | 박지윤(V) 구연성(G1) 유수민(G2) 김예은(B) 조민재(D) 김수민(K1) 이서윤(K2)",
@@ -231,8 +247,13 @@ document.addEventListener("DOMContentLoaded", () => {
       .forEach(song => {
         const li = document.createElement("li");
         li.textContent = song.title;
+
+        if (song.original === 1){
+          li.classList.add("original-song")
+        }
+        
         // 클릭 토글
-       li.addEventListener("click", () => {
+        li.addEventListener("click", () => {
           const alreadyActive = li.classList.contains("active");
           // 모두 비활성화
           Array.from(songList.children).forEach(n => n.classList.remove("active"));
