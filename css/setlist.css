@@ -68,13 +68,19 @@ main.setlist-page {
   padding: 0;
 }
 .song-list li{
+  display: flex;
   background: #fff;
   color: var(--blue-ink);
   font-family: "Bold";
-  font-size: 15px;
-  text-align: center;
+  font-size: 20px;
+  align-items: center;         /* 세로 가운데 */
+  justify-content: center;     /* 가로 가운데 */
+  text-align: center; 
   line-height: 1.4;
+  height: 60px;
   padding: 18px 20px;
+  margin: 5px 0;
+  box-sizing: border-box;
   border-radius: 15px;
   box-shadow: var(--card-shadow);
   max-width: 90%;
@@ -168,13 +174,13 @@ main.setlist-page {
     text-align: center;
     font-size: 13px; 
     padding: 14px 16px;
-    font-size: 13px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
   }
   .song-detail-header.centered {
-    font-size: 12px;
+    font-size: 9px;
     display: flex;
     justify-content: center;  /* 가로 중앙 */
     align-items: center;      /* 세로 중앙 */
