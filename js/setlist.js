@@ -368,7 +368,7 @@ One ride with me you'd forget your past romance
   
 So come over here, no fuss and no doubt 
 This thing with me is what it's all about 
-Just grab my hand, I'm the one you've been dreamin' 
+Just grab my hand, I'm the one you've been dreamin'
 You'll fall for me boy you know what I mean 
   
 Give one try, may deny 
@@ -1002,11 +1002,24 @@ document.addEventListener("DOMContentLoaded", () => {
   const divider = document.getElementById("songDivider");
   const setlistRight = document.querySelector(".setlist-right");
 
+  function closePanel() {
+    setDefaultDetailMessage();
+    Array.from(songList.children).forEach((n) => n.classList.remove("active"));
+  }
+
+  if (setlistRight) {
+    setlistRight.addEventListener("click", (e) => {
+      if (e.target === setlistRight) {
+        closePanel();
+      }
+    });
+  }
+
   // 안내문(센터 정렬) 세팅 함수
   function setDefaultDetailMessage() {
     detailHeader.classList.add("centered"); // CSS에 .song-detail-header.centered 정의 필요
     detailHeader.innerHTML =
-      "클릭하여 세부 정보를 확인해주세요!<br />창을 다시 클릭하면 창이 닫힙니다.";
+      "클릭하여 세부 정보를 확인해주세요!\n<br />창을 다시 클릭하면 창이 닫힙니다.";
     lyricsBox.innerHTML = "";
     if (divider) divider.style.display = "none";
     if (setlistRight) {
@@ -1045,13 +1058,27 @@ document.addEventListener("DOMContentLoaded", () => {
           }
           // 상세(좌측 정렬로 전환)
           detailHeader.classList.remove("centered");
-          detailHeader.innerHTML = `
-            <strong>${song.title}</strong><br>
+          detailHeader.innerHTML =
+            `
+            <div class="song-title-wrapper">
+              <strong>${song.title}</strong>
+            </div>
             <span style="font-size:0.85rem;">${song.meta.replaceAll(
               "\n",
               "<br>"
             )}</span>
-          `;
+          `
+
+          const closeBtn = document.createElement('span');
+          closeBtn.classList.add('song-detail-close-btn');
+          closeBtn.innerHTML = '&times;';
+          closeBtn.onclick = (e) => {
+              e.stopPropagation();
+              closePanel();
+          };
+
+          detailHeader.querySelector('.song-title-wrapper').appendChild(closeBtn);
+
           // 구분선 + 가사 표시
           if (divider) divider.style.display = "block";
           lyricsBox.textContent = song.lyrics || "가사 정보가 없습니다.";
@@ -1080,5 +1107,3 @@ document.addEventListener("DOMContentLoaded", () => {
   renderSongs("1");
   setDefaultDetailMessage();
 });
-
-document.addEventListener(".setlist-right")

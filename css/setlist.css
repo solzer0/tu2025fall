@@ -140,6 +140,31 @@ main.setlist-page{
     text-align: center;       /* 여러 줄도 중앙 */
     min-height: 500px;        /* 높이 확보 (원하는 값으로 조절 가능) */
 }
+
+.song-title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.song-title-text {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 10px;
+}
+
+.song-detail-close-btn {
+  flex: 0 0 auto;
+  font-size: 24px;
+  cursor: pointer;
+  padding-right: 2.5vw;
+  font-weight: bold;
+  line-height: 1;
+}
+
 /* 바깥 카드(하얀 박스): 모서리 밖으로 내용 못 나가게 */
 .song-detail-column {
   background: #fff;
