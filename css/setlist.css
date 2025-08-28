@@ -112,15 +112,18 @@ main.setlist-page{
 /* 오른쪽 상세 카드(텍스트 컬러 정리) */
 .setlist-right{
   position: fixed;
-  top: 72px;
+  z-index: 9999;
+  top: 90px;
   left: 85vw;
-  height: 100%;
-  width: 100%;
+  height: 77.5%;
+  width: 90%;
   background: #fff;
   border-radius: 22px;
+  border: 2px solid #1658C1;
   padding: 16px;
-  box-shadow: var(--card-shadow);
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.25);
   color: var(--ink);          /* 기본 텍스트는 검정 */
+  transition: left 0.5s ease;
 }
 .song-detail-header{
   font-family: "Bold";
@@ -170,8 +173,6 @@ main.setlist-page{
   -webkit-overflow-scrolling: touch;
 }
 .setlist-wrapper{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     padding: 12px;
     max-width: 100%;
     gap: 1.5rem;
@@ -182,8 +183,9 @@ main.setlist-page{
     -webkit-overflow-scrolling: touch;
 }
 /* 좌/우 칼럼이 눈에 보이도록 최소 높이 확보 */
-.setlist-left{
+.setlist-container{
   min-height: 60vh;
+  width: 70vw;
   display: flex;
   flex-direction: column;
   height: 100%;     /* 부모(.setlist-wrapper)의 높이에 맞추기 */

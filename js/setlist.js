@@ -1000,6 +1000,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const lyricsBox = document.querySelector(".song-lyrics-scroll");
   const tabs = document.querySelectorAll(".tab");
   const divider = document.getElementById("songDivider");
+  const setlistRight = document.querySelector(".setlist-right");
 
   // 안내문(센터 정렬) 세팅 함수
   function setDefaultDetailMessage() {
@@ -1008,6 +1009,9 @@ document.addEventListener("DOMContentLoaded", () => {
       "클릭하여 세부 정보를 확인해주세요!<br />창을 다시 클릭하면 창이 닫힙니다.";
     lyricsBox.innerHTML = "";
     if (divider) divider.style.display = "none";
+    if (setlistRight) {
+      setlistRight.style.left = "85vw";
+    }
   }
 
   function renderSongs(part) {
@@ -1036,6 +1040,9 @@ document.addEventListener("DOMContentLoaded", () => {
           }
           // 활성화
           li.classList.add("active");
+          if (setlistRight) {
+            setlistRight.style.left = "12vw";
+          }
           // 상세(좌측 정렬로 전환)
           detailHeader.classList.remove("centered");
           detailHeader.innerHTML = `
@@ -1073,3 +1080,5 @@ document.addEventListener("DOMContentLoaded", () => {
   renderSongs("1");
   setDefaultDetailMessage();
 });
+
+document.addEventListener(".setlist-right")
