@@ -2,7 +2,7 @@
 // @ts-ignore
 
 const songs = [
-   // --- Part 1 ---
+  // --- Part 1 ---
   {
     original: 0,
     title: "Far Away",
@@ -32,8 +32,8 @@ So we just gonna far away
 지금 우리는 무언가를 준비해야 해 
 So we just gonna far away 
 So we just gonna far away 
-` 
-},
+`,
+  },
   {
     original: 0,
     title: "날씨의 요정",
@@ -70,7 +70,7 @@ So we just gonna far away
 행복해 지금도 이렇게 좋은데 
 어딜 가게 놔두겠어 내 맘이 더 불어지면 
 내게 자주 찾아와줘요 이 빛으로 
-`
+`,
   },
   {
     original: 1,
@@ -118,7 +118,7 @@ because she ain't fond of me
   
 she ain't fond of me 
 she ain't fond of mEEEEEEEEEEE 
-`
+`,
   },
   {
     original: 0,
@@ -182,7 +182,7 @@ she ain't fond of mEEEEEEEEEEE
 (계속 지기만 했다고 포기할 수는 없어) 
 遠回りくらいが丁度いい 
 (멀리 돌아가는 게 딱 좋은 것 같아) 
-`
+`,
   },
   {
     original: 1,
@@ -241,7 +241,7 @@ she ain't fond of mEEEEEEEEEEE
 비겁한 날들  
 시끄러운 너의 발소리 
 오늘도 머리가 아프다 
-`
+`,
   },
   {
     original: 0,
@@ -354,7 +354,7 @@ Focus on to focus I close my eyes
 (집중하기 위해 나는 눈을 감아요)
 Then Oye yells
 (그리고 Oye라고 외칩니다)
-`
+`,
   },
   {
     original: 1,
@@ -404,7 +404,7 @@ You know that I am standing here so you gotta see me
 Whatever my lips are getting dry 
 There's only one that I can hear you're all I do 
 I know that you will come around 
-`   
+`,
   },
   {
     original: 0,
@@ -463,10 +463,10 @@ I know that you will come around
 또 생각지도 못한 날들 일 땐 
 웃어버리면 돼 우리가 바랐던 곳에 
 널 꼭 데려갈게 
-`
+`,
   },
-   // --- Part 2 ---
-   {
+  // --- Part 2 ---
+  {
     original: 0,
     title: "전설",
     part: "2",
@@ -503,13 +503,13 @@ Save my life
 품에 안겨서 입을 맞추고 
 Rock 'n' roll 
 Wave your flag 
-`
+`,
   },
   {
     original: 1,
     title: "Ch. 2",
     part: "2",
-    meta: "작곡작사 | 박지윤\n편곡 | 김지우 박지윤 이우준 조민재 조영채\n참여 | 박지윤(V) 이우준(G1) 신한영(G2) 김예은(B) 조민재(D) 이제하(K)",
+    meta: "작곡작사 | 박지윤\n편곡 | 박지윤 조민재 김지우 조영채 이우준\n참여 | 박지윤(V) 이우준(G1) 신한영(G2) 김예은(B) 조민재(D) 이제하(K)",
     lyrics: `실패했다 자책하며 시작한 발걸음 
 그 와중에 하고싶은 걸 찾아 들어온 이 곳 
 동경했던 그 모습을 한 번만 해야지 
@@ -542,13 +542,13 @@ Wave your flag
 그동안 수고했어 고생했어 한 마디하는 노래를 할래 
 이젠 마음의 짐도 없이 후련함 가득히 
 네게 안녕을 고해 
-`
+`,
   },
   {
     original: 0,
     title: "Bremen",
     part: "2",
-    meta: "원곡 | ヨルシカ(요루시카)\n참여 | 선율(V) 오명(G1) 구연성(G2) 신한영(B) 김채영(D) 김다영(K1) 설수민(K2) 이민규(Chorus)",
+    meta: "원곡 | ヨルシカ(요루시카)\n참여 | 선율(V) 오명(G1) 구연성(G2) 신한영(B) 김채영(D) 김다영(K1) 설수민(K2) 방민서(Chorus) 이민규(Chorus) 조민재(Chorus) 한호현(Chorus)",
     lyrics: `ねぇ考えなくてもいいよ 
 (저기 생각하지 않아도 괜찮아) 
 口先じゃ分かり合えないの 
@@ -648,7 +648,7 @@ Wave your flag
 (내일은 뭐할까 한가하면 같이 웃자) 
 そのうちわかり合おうぜ 
 (때가 되면 서로 알아가자) 
-`
+`,
   },
   {
     original: 1,
@@ -717,7 +717,7 @@ Wave your flag
 가만히 가만히 가만히 앉아서 
 스쳐 지나가는 너희를 
 쓰라리도록 봐 
-`
+`,
   },
   {
     original: 1,
@@ -785,15 +785,14 @@ Wave your flag
 어린 날의 꿈이라 
 계속 되뇌일 뿐야 
 그냥 묻어두고서 
-`
+`,
   },
   {
     original: 0,
     title: "깊은 밤을 날아서",
     part: "2",
-    meta: "원곡 | 이문세\n참여 | 이우준(V) 구연성(G) 최종윤(B) 조은비(D) 이재민(K)",
-    lyrics: 
-`우리들 만나고 
+    meta: "원곡 | 이문세\n참여 | 이우준(V) 구연성(G) 최종윤(B) 조은비(D) 이재민(K1) 이제하(K2) 박지윤(Chorus) 신한영(Chorus)",
+    lyrics: `우리들 만나고 
 헤어지는 모든 일들이 
 어쩌면 어린애들 놀이 같아 
 슬픈 동화 속에 구름 타고 
@@ -838,13 +837,13 @@ Wave your flag
 사랑은 아름다운 꿈결처럼 
 고운 그대 손을 잡고 밤하늘을 
 날아서 궁전으로 갈 수도 있어 
-`
+`,
   },
   {
     original: 0,
     title: "BETELGEUSE",
     part: "2",
-    meta: "원곡 | 優里(유우리)\n참여 | 방민서(V) 김동현(AG) 정대현(EG1) 임경재(EG2) 김예은(B) 조은비(D) 설수민(K)",
+    meta: "원곡 | 優里(유우리)\n참여 | 방민서(V) 김동현(AG) 정대현(EG1) 임경재(EG2) 김예은(B) 조은비(D) 설수민(K) 김리율(Chorus) 이민규(Chorus)",
     lyrics: `空にある何かを見つめてたら 
 (하늘에 있는 무언가를 바라보고 있으니까) 
 それは星だって君がおしえてくれた 
@@ -916,93 +915,83 @@ Wave your flag
 見えない線を繋ごう 
 (보이지 않는 선을 잇자) 
 
-僕ら見つけあって 手繰りあって 同じ空 
-(우리는 서로 찾아내고, 서로 당기며 똑같은 하늘을) 
-輝くのだって 二人だって 約束した 
-(빛내자고, 둘이 있자고 약속했어) 
-遥か遠く終わらないべテルギウス 
-(아득히 먼 끝나지 않는 베텔기우스) 
-誰かに繋ぐ魔法 
-(누군가에게 이어지는 마법) 
+높은 하늘을 헤집어 서로를 당겨 안아 줄 테니
+꺼지지 않고 함께 빛나리라고 약속했었잖아
+하루를 넘어서 이어지는 베텔기우스
+너에게로 이어질 마법
 
-僕ら 肩並べ 手取り合って 進んでく 
-(우리는 어깨를 나란히 하고 손을 맞잡고 나아가) 
-辛い時だって 二人だって 誓っただろう 
-(힘들 때라고 해도 둘이 있자고 맹세했잖아) 
-遥か遠く終わらないべテルギウス 
-(아득히 먼 끝나지 않는 베텔기우스) 
-君にも見えるだろう 祈りが 
-(너에게도 보이지, 기도가) 
+어깨를 나란히 맞대 손을 잡은 채 서성대고
+길을 잃을 지라도 놓지 않을게 잊지 못하도록
+아득히 멀리에서 영원할 베텔기우스
+너에게도 닿아 있는지, 이 바람이
 
-空にある何かを見つめてたら 
-(하늘에 있는 무언가를 바라보고 있으니까) 
-それは星だって君がおしえてくれた 
-(그건 별이라고 네가 알려 주었어) 
-`
+소란히 아른대는 빛을 믿지 못한 내게
+속삭이듯이 말해 주었지 별이 아름답다고 
+`,
   },
-//   {
-//     original: 0,
-//     title: "???",
-//     part: "2",
-//     meta: "원곡 | 유다빈밴드\n참여 | 김리율(V) 한호현(G1) 이우준(G2) 김예은(B) 조민재(D) 정홍준(K1) 이서윤(K2)",
-//     lyrics: `달려가고 있었어
-// 작은 결심을 품고 
-// 숨찬 언덕길 
-// 끝에 선 두 발자국 
-// 그때 시작된 나의 노래 
- 
-// 도망치고 싶었던 
-// 겁이 많았던 시절 
-// 한참 망설인 
-// 걷잡을 수 없는 마음 
-// 내 두 손에 꼭 쥔 약속 
-// 운명을 믿지 않았던 너에게로 
- 
-// 이 시간과 공간을 훌쩍 넘어서 
-// 마주침의 뜨거운 순간을 
-// 한없이 기다리고 있던 
-// 그날의 우리를 찾을 수 있기를 
- 
-// 한 번쯤 들었겠지 
-// 노래는 한밤의 불빛처럼 달려 
-// 쉼 없이 이 길을 거슬러 
-// 마침내 도착한 곳에서 
-// 오랜 약속처럼 너를 만나기를 오- 
- 
-// 아무 말도 없었지 
-// 고개 숙여 웃던 너 
-// 문득 낚아챈 너의 손을 꼭 잡고서 
-// 이 길 끝까지 달리자 
-// 그것이 나의 고백이 될 수 있게 
- 
-// 마음과 마음은 한껏 부풀어 
-// 터질 듯한 가슴의 떨림 
-// 쏟아질 듯했던 하늘과 
-// 그때 저 멀리서 울렸던 피아노 
- 
-// 한 번쯤 들었겠지 
-// 노래는 한밤의 불빛처럼 달려 
-// 수많은 날들이 흘러도 
-// 잊을 수가 없던 뒷모습 
-// 서툰 첫인사로 다시 만나기를 
-// 또 빛나기를 눈부시기를 
-// 아름다운 만큼 짧았던 그날처럼 
- 
-// 시간과 공간을 훌쩍 넘어서 
-// 다시 운명에게 묻는다 
-// 너의 손을 놓지 않았다면 
-// 우린 어디쯤을 달리고 있을까 
- 
-// 한 번쯤 들었겠지 
-// 노래는 한밤의 불빛처럼 달려 
-// 쉼 없이 이 길을 거슬러 
-// 마침내 도착한 곳에서 
-// 오랜 약속처럼 너를 만나기를 오- 
- 
-// 달려가고 있었어 
-// 작은 결심을 품고
-// `
-// }
+    {
+      original: 0,
+      title: "???",
+      part: "2",
+      meta: "원곡 | 유다빈밴드\n참여 | 김리율(V) 한호현(G1) 이우준(G2) 김예은(B) 조민재(D) 정홍준(K1) 이서윤(K2)",
+      lyrics: `달려가고 있었어
+  작은 결심을 품고
+  숨찬 언덕길
+  끝에 선 두 발자국
+  그때 시작된 나의 노래
+
+  도망치고 싶었던
+  겁이 많았던 시절
+  한참 망설인
+  걷잡을 수 없는 마음
+  내 두 손에 꼭 쥔 약속
+  운명을 믿지 않았던 너에게로
+
+  이 시간과 공간을 훌쩍 넘어서
+  마주침의 뜨거운 순간을
+  한없이 기다리고 있던
+  그날의 우리를 찾을 수 있기를
+
+  한 번쯤 들었겠지
+  노래는 한밤의 불빛처럼 달려
+  쉼 없이 이 길을 거슬러
+  마침내 도착한 곳에서
+  오랜 약속처럼 너를 만나기를 오-
+
+  아무 말도 없었지
+  고개 숙여 웃던 너
+  문득 낚아챈 너의 손을 꼭 잡고서
+  이 길 끝까지 달리자
+  그것이 나의 고백이 될 수 있게
+
+  마음과 마음은 한껏 부풀어
+  터질 듯한 가슴의 떨림
+  쏟아질 듯했던 하늘과
+  그때 저 멀리서 울렸던 피아노
+
+  한 번쯤 들었겠지
+  노래는 한밤의 불빛처럼 달려
+  수많은 날들이 흘러도
+  잊을 수가 없던 뒷모습
+  서툰 첫인사로 다시 만나기를
+  또 빛나기를 눈부시기를
+  아름다운 만큼 짧았던 그날처럼
+
+  시간과 공간을 훌쩍 넘어서
+  다시 운명에게 묻는다
+  너의 손을 놓지 않았다면
+  우린 어디쯤을 달리고 있을까
+
+  한 번쯤 들었겠지
+  노래는 한밤의 불빛처럼 달려
+  쉼 없이 이 길을 거슬러
+  마침내 도착한 곳에서
+  오랜 약속처럼 너를 만나기를 오-
+
+  달려가고 있었어
+  작은 결심을 품고
+  `
+  }
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -1015,7 +1004,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // 안내문(센터 정렬) 세팅 함수
   function setDefaultDetailMessage() {
     detailHeader.classList.add("centered"); // CSS에 .song-detail-header.centered 정의 필요
-    detailHeader.innerHTML = "클릭하여 세부 정보를 확인해주세요!<br />창을 다시 클릭하면 창이 닫힙니다.";
+    detailHeader.innerHTML =
+      "클릭하여 세부 정보를 확인해주세요!<br />창을 다시 클릭하면 창이 닫힙니다.";
     lyricsBox.innerHTML = "";
     if (divider) divider.style.display = "none";
   }
@@ -1023,20 +1013,22 @@ document.addEventListener("DOMContentLoaded", () => {
   function renderSongs(part) {
     songList.innerHTML = "";
     songs
-      .filter(song => song.part === part)
-      .forEach(song => {
+      .filter((song) => song.part === part)
+      .forEach((song) => {
         const li = document.createElement("li");
         li.textContent = song.title;
 
-        if (song.original === 1){
-          li.classList.add("original-song")
+        if (song.original === 1) {
+          li.classList.add("original-song");
         }
 
         // 클릭 토글
         li.addEventListener("click", () => {
           const alreadyActive = li.classList.contains("active");
           // 모두 비활성화
-          Array.from(songList.children).forEach(n => n.classList.remove("active"));
+          Array.from(songList.children).forEach((n) =>
+            n.classList.remove("active")
+          );
           if (alreadyActive) {
             // 접기
             setDefaultDetailMessage();
@@ -1048,7 +1040,10 @@ document.addEventListener("DOMContentLoaded", () => {
           detailHeader.classList.remove("centered");
           detailHeader.innerHTML = `
             <strong>${song.title}</strong><br>
-            <span style="font-size:0.85rem;">${song.meta.replaceAll("\n", "<br>")}</span>
+            <span style="font-size:0.85rem;">${song.meta.replaceAll(
+              "\n",
+              "<br>"
+            )}</span>
           `;
           // 구분선 + 가사 표시
           if (divider) divider.style.display = "block";
@@ -1060,18 +1055,18 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // 탭 전환
-  tabs.forEach(tab => {
+  tabs.forEach((tab) => {
     tab.addEventListener("click", () => {
-      tabs.forEach(t => t.classList.remove("active"));
+      tabs.forEach((t) => t.classList.remove("active"));
       tab.classList.add("active");
-      
+
       renderSongs(tab.dataset.part);
       setDefaultDetailMessage(); // 안내문 중앙 정렬 상태로 리셋
     });
   });
 
   // 초기 상태: 1부 탭 활성화 + 리스트 렌더 + 안내문
-  tabs.forEach(t => t.classList.remove("active"));
+  tabs.forEach((t) => t.classList.remove("active"));
   const firstTab = document.querySelector('.tab[data-part="1"]');
   if (firstTab) firstTab.classList.add("active");
 
