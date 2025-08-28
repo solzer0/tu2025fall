@@ -56,7 +56,7 @@ main.setlist-page{
   backdrop-filter: blur(5px);
   color: #fff;
   font-family: "Bold";
-  font-size: 15px;
+  font-size: 14px;
 } 
 .setlist-tabs .tab{
   flex: 1;
@@ -88,7 +88,7 @@ main.setlist-page{
     background: #fff;
     color: var(--blue-ink);
     font-family: "Bold";
-    font-size: 15px;
+    font-size: 14px;
     align-items: center;         /* 세로 가운데 */
     justify-content: center;     /* 가로 가운데 */
     text-align: center; 
