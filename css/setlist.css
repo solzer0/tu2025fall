@@ -144,7 +144,7 @@ main.setlist-page{
   bottom: 84px;
   left: 85vw;
   background: #fff;
-  border-radius: 22px;
+  border-radius: 22px 0 0 22px; 
   border: 2px solid #1658C1;
   padding: 16px;
   box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.25);
