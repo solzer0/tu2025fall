@@ -38,23 +38,24 @@
     <main class="setlist-page">
       <div class="setlist-wrapper">
         <!-- Left: Tabs + Song List -->
-          <div class="setlist-left">
-              <div class="setlist-tabs">
-                <div class="tab active" data-part="1">1부</div>
-                <div class="tab" data-part="2">2부</div>
-              </div>
+          <div class="setlist-container"> 
+            <div class="setlist-tabs">
+              <div class="tab active" data-part="1">1부</div>
+              <div class="tab" data-part="2">2부</div>
+            </div>
             <ul class="song-list" id="songList">
               <!-- JavaScript에서 삽입 -->
             </ul>
           </div>
         <!-- Right: Song Detail -->
-          <div class="setlist-right">
+        <div class="setlist-right-shadow"></div>
+        <div class="setlist-right">
             <div class="song-detail-header">
-              클릭하여 세부정보를 확인해주세요!<br />창을 다시 클릭하면 창이 닫힙니다.
+              
             </div>
             <div class="divider-line" id="songDivider" style="display:none;"></div>
             <div class="song-lyrics-scroll"></div>
-          </div>
+        </div>
       </div>
     </main>
 

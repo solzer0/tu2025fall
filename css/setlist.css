@@ -9,13 +9,11 @@
 /* 공통색상 */
 :root{
   --footer-h: 50px;
-  --blue: #1f52ff;
-  --blue-ink: #2b5ddc;      /* 리스트 평상시 글자색 */
+  --blue: #1658C1;
+  --blue-ink: #1658C1;      /* 리스트 평상시 글자색 */
   --ink: #000;
   --ink-2: #333;
   --background-color: rgba(255, 255, 255, 0.75); 
-  --card-shadow: 0 10px 22px rgba(0,0,0,0.16);
-  --active-shadow: 0 10px 20px rgba(31,82,255,0.35);
 }
 html, body {
   margin: 0;
@@ -33,134 +31,190 @@ body{
 }
 main {
   flex: 1 1 auto;        /* 남은 높이 모두 */
-  min-height: 0;         /* 안쪽 스크롤이 먹도록 */
-  overflow: hidden;      /* 메인 자체는 넘치지 않게(중간에 얇은 스크롤 방지) */
-
+  overflow: hidden;      
 }
-main.setlist-page {
-  min-height: 100vh;
+main.setlist-page{
+    height: calc(100vh - 110px); /*100vdh 지원 안될 경우*/
+    padding: 0px;
+    background: url('../images/poster.jpg') no-repeat center/cover;
+}
+.setlist-wrapper{
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 36px;
+    padding-bottom: 144px;      /*100vdh 지원 안될 경우*/
+    max-width: 100%;
+    width: 100%;
+    height: 100%;              
+    min-height: 0;
+    overflow-y: hidden;              
+}
+@supports (height: 100dvh){     /*100vdh 지원 될 경우*/
+  main.setlist-page{
+    height: calc(100dvh - 110px);
+  }
+  .setlist-wrapper{
+    padding-bottom: 44px;
+  }
+}
+.setlist-container{
+  width: 70vw;
   display: flex;
-  justify-content: center;
-  align-items: start;
-  padding: 2rem;
-  padding-bottom: calc(var(--footer-h) + 80px);
+  flex-direction: column;
+  height: 100%;     
+  min-height: 0;          
 }
-/* 탭(1부/2부) */
+
+
 .setlist-tabs{
   display: flex;
-  justify-content: space-around;
-  gap: 10px;
-  margin-bottom: 1rem;
-  border-radius: 30px;
+  flex: 0 0 auto;   /* 높이 고정 (자동 높이) */
+  height: 4.5vh; 
+  justify-content: center;
+  border-radius:  20px;
   overflow: hidden;
   background-color: var(--background-color);
   backdrop-filter: blur(5px);
   color: #fff;
   font-family: "Bold";
-  max-width: 90%; 
+  font-size: 14px;
 } 
 .setlist-tabs .tab{
   flex: 1;
   text-align: center;
+  line-height: 4.2vh;
   cursor: pointer;
-  padding: 0.8rem 0;
   border: 2px solid transparent;
   border-radius: 30px;
   background-color: transparent;     
-  color: #1658c1;
+  color: #1658C1;
   transition: background-color .3s ease, color .3s ease, box-shadow .3s ease;
 }
 .setlist-tabs .tab.active{
   background-color: white;
 }
+
 /* 곡 리스트 카드 */
-.song-list{
-  margin-top: 12px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  list-style: none;
-  padding: 0;
+.song-list {
+    margin-top: 1.8vh;
+    gap: 1.7vh;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    flex: 1 1 auto;        /* 남은 공간 전부 차지 */
 }
-.song-list li{
-  display: flex;
-  background: #fff;
-  color: var(--blue-ink);
-  font-family: "Bold";
-  font-size: 20px;
-  align-items: center;         /* 세로 가운데 */
-  justify-content: center;     /* 가로 가운데 */
-  text-align: center; 
-  line-height: 1.4;
-  height: 60px;
-  padding: 18px 20px;
-  margin: 5px 0;
-  box-sizing: border-box;
-  border-radius: 15px;
-  box-shadow: var(--card-shadow);
-  max-width: 90%;
-  cursor: pointer;
+
+.song-list li {
+    display: flex;
+    background: #fff;
+    color: var(--blue-ink);
+    font-family: "Bold";
+    font-size: 16px;
+    align-items: center;         /* 세로 가운데 */
+    justify-content: center;     /* 가로 가운데 */
+    text-align: center; 
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+    cursor: pointer;
+    flex: 1 1 auto;           /* 공간 균등 분배 */
+    letter-spacing: -0.02em;  /* 글자 간격 줄이기 */
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.25);
 }
 .song-list li.original-song {
-  background: var(--blue);  /* 파란색 배경 */
+  background: var(--blue);    /* 파란색 배경 */
   color: #fff;              /* 흰색 폰트 */
 }
 /* 곡 리스트 클릭 시 */
 .song-list li.active{
   box-shadow: var(--active-shadow);
 }
+
 /* 오른쪽 상세 카드(텍스트 컬러 정리) */
+.setlist-right,
+.setlist-right-shadow {
+  position: fixed;
+  top: 87px;
+  bottom: 84px;               /*90px; */
+  transition: left 0.5s ease;
+}
+.setlist-right-shadow {
+  left: calc(88vw - 11vw); /* setlist.js의 수치 - shadow 너비 */
+  width: 11vw;
+  background: transparent;
+}
 .setlist-right{
-  background: #fff;
-  border-radius: 22px;
+  left: 88vw;
+  position: fixed;
+  display: flex;         
+  flex-direction: column;
+  box-sizing: border-box;
+
+  z-index: 9999;
+  width: 90%;
+
   padding: 16px;
-  box-shadow: var(--card-shadow);
+  border-radius: 22px 0 0 22px; 
+  background: #fff;
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.25);
+  border: 2px solid #1658C1;
   color: var(--ink);          /* 기본 텍스트는 검정 */
 }
+
+
 .song-detail-header{
   font-family: "Bold";
-  font-size: 20px;            /* 제목 크기 */
+  font-size: 20px;         
   line-height: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
   color: var(--ink);
 }
 .song-detail-header.centered {
-  font-size: small;
+    font-size: 9px;
+    display: flex;
+    justify-content: center;  /* 가로 중앙 */
+    align-items: center;      /* 세로 중앙 */
+    text-align: center;       /* 여러 줄도 중앙 */
+    min-height: 500px;        /* 높이 확보 (원하는 값으로 조절 가능) */
+}
+
+
+
+.song-title-wrapper {
   display: flex;
-  justify-content: center;  /* 가로 중앙 */
-  align-items: center;      /* 세로 중앙 */
-  text-align: center;       /* 여러 줄도 중앙 */
-  min-height: 500px;        /* 높이 확보 (원하는 값으로 조절 가능) */
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
 }
-/* 바깥 카드(하얀 박스): 모서리 밖으로 내용 못 나가게 */
-.song-detail-column {
-  background: #fff;
-  border-radius: 18px;
-  overflow: hidden;     /* 경계 밖 내용/그림자 잘라내기 */
-  min-height: 0;
+.song-detail-close-btn {
+  flex: 0 0 auto;
+  font-size: 24px;
+  cursor: pointer;
+  padding-right: 2.5vw;
+  font-weight: bold;
+  line-height: 1;
 }
-/* 참여 ↔ 가사 구분선: 얇은 일자 */
-.divider-line{
+.song-detail-header .song-meta{
+  font-size: 0.8rem;
+  line-height: 1.5;   /* 행간 조절 */
+}
+.divider-line{ /* 구분선 */
   width: 100%;
   height: 1px;
   background: #000;
   opacity: .85;
-  margin: 10px 0 12px;
+  margin: 10px 0 10px;
   flex-shrink: 0;
 }
-#songList{
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  gap: 0.5rem;
-}
-/* 가사만 스크롤 + 색상/행간 */
-.song-lyrics-scroll{
+.song-lyrics-scroll{ /* 가사 */
   height: 100%;
   padding: 14px;
-  max-height: 44vh;           /* 헤더/메타는 고정, 가사만 스크롤 */
+  margin-bottom: 14px;
   min-height: 0;
   overflow-y: auto;
-  font-size: 15px;
+  font-size: 0.8rem;
   line-height: 130%;
   white-space: pre-wrap;
   word-break: break-word;       /* 긴 단어/URL 강제 줄바꿈 */
@@ -168,30 +222,7 @@ main.setlist-page {
   color: var(--ink-2);         /* 가사는 진회색 */
   -webkit-overflow-scrolling: touch;
 }
-.setlist-wrapper{
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: 1.5rem;
-  width: 100%;
-  height: 100%;                 /* 고정 높이 */
-  min-height: 0;
-  overflow-y: auto;              /* 이곳만 스크롤 */
-  -webkit-overflow-scrolling: touch;
-  max-width: 900px;
-  padding: 2rem;
-}
-/* 좌/우 칼럼이 눈에 보이도록 최소 높이 확보 */
-.setlist-left,
-.setlist-right{
-  min-height: 60vh;
-}
-/* 오른쪽 카드가 ‘버블’처럼 작아지지 않도록 */
-.setlist-right{
-  background: #fff;
-  border-radius: 22px;
-  padding: 16px;
-  box-shadow: var(--card-shadow);
-}
+
 .poster-bg{
   position: fixed;   /* 화면 전체에 고정 */
   inset: 0;          /* top:0; right:0; bottom:0; left:0 */
@@ -203,48 +234,4 @@ main.setlist-page {
   position: fixed;
   inset: 0;
   pointer-events: none;          /* 필요 시 클릭 막기 */
-}
-/* ===== 모바일 최적화 ===== */
-@media (max-width: 600px){
-  main.setlist-page{
-    min-height: 100dvh;
-    padding: 12px 12px 84px;       /* 푸터 겹침 방지 */
-    background: url('../images/poster.jpg') no-repeat center/cover;
-    padding-bottom: calc(var(--footer-h) + 80px);
-  }
-  .setlist-right{
-    height: 100%;     
-    min-height: 0;    /* flex/grid 안에서 스크롤 가능하게 */
-    overflow: hidden; /* 둥근 모서리 밖으로 튀지 않게 */
-    background: #fff;
-    border-radius: 22px;
-    padding: 16px;
-    box-shadow: var(--card-shadow);
-    color: var(--ink);          /* 기본 텍스트는 검정 */
-    font-size: xx-small;
-}
-  .setlist-wrapper{
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;  /* 좌:우 비율 */
-    gap: 14px;
-    padding: 12px;
-    max-width: 100%;
-  }
-  .song-list li{
-    text-align: center;
-    font-size: 13px; 
-    padding: 14px 16px;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-  }
-  .song-detail-header.centered {
-    font-size: 9px;
-    display: flex;
-    justify-content: center;  /* 가로 중앙 */
-    align-items: center;      /* 세로 중앙 */
-    text-align: center;       /* 여러 줄도 중앙 */
-    min-height: 500px;        /* 높이 확보 (원하는 값으로 조절 가능) */
-  }
 }
