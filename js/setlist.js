@@ -844,97 +844,98 @@ Wave your flag
     title: "BETELGEUSE",
     part: "2",
     meta: "원곡 | 優里(유우리)\n참여 | 방민서(V) 김동현(AG) 정대현(EG1) 임경재(EG2) 김예은(B) 조은비(D) 설수민(K) 김리율(Chorus) 이민규(Chorus)",
-    lyrics: `空にある何かを見つめてたら 
-(하늘에 있는 무언가를 바라보고 있으니까) 
-それは星だって君がおしえてくれた 
-(그건 별이라고 네가 알려 주었어) 
-まるでそれは僕らみたいに 寄り添ってる 
-(마치 그것은 우리들처럼 붙어있어) 
-それを泣いたり笑ったり繋いでいく 
-(그것을 울면서 웃으면서 이어가고 있어) 
+    lyrics: `空にある何かを見つめてたら  
+(하늘에 있는 무언가를 바라보는데)  
+それは星だって君がおしえてくれた  
+(그건 별이라고 네가 알려 주었어)  
+まるでそれは僕らみたいに 寄り添ってる  
+(별들은 마치 우리처럼 꼭 붙어)  
+それを泣いたり笑ったり繋いでいく  
+(울고 웃으며 서로를 이어간다고)  
 
-何十回 何百回 ぶつかりあって 
-(몇 십 번, 몇 백 번 서로 부딪쳐서) 
-何十年 何百年 昔の光が 
-(몇 십 년, 몇 백 년 옛날의 빛이) 
-星自身も忘れたころに 
-(별 자신도 잊었을 즈음에) 
-僕らに届いてる 
-(우리들에게 도착해) 
+何十回 何百回 ぶつかりあって  
+(수십 번 수백 번 부딪혀 만든)  
+何十年 何百年 昔の光が  
+(수십 년 수백 년 전 오래된 빛이)  
+星自身も忘れたころに  
+(별 자신조차 잊어갈 무렵)  
+僕らに届いてる  
+(우리에게 닿았지)  
 
-僕ら見つけあって 手繰りあって 同じ空 
-(우리는 서로 찾아내고, 서로 당기며 같은 하늘을) 
-輝くのだって 二人だって 約束した 
-(빛내자고, 둘이 있자고 약속했어) 
-遥か遠く終わらないべテルギウス 
-(아득히 먼 끝나지 않는 베텔기우스) 
-誰かに繋ぐ魔法 
-(누군가에게 잇는 마법) 
-僕ら 肩並べ 手取り合って 進んでく 
-(우리는 어깨를 나란히 하고 손을 마주잡으며 나아가) 
-辛い時だって 泣かないって 誓っただろう 
-(힘들 때라고 해도 울지 않겠다고 맹세했잖아) 
-遥か遠く終わらないべテルギウス 
-(아득히 먼 끝나지 않는 베텔기우스) 
-君にも見えるだろう 祈りが 
-(너에게도 보일 거야, 기도가) 
+僕ら見つけあって 手繰りあって同じ空  
+(우리는 서로를 찾아내고 끌어당기며 같은 하늘에서)  
+輝くのだって 二人だって約束した  
+(둘이 함께 빛나자고 약속했었지)  
+遥か遠く終わらないべテルギウス  
+(아득히 멀리에서 끝나지 않는 베텔기우스)  
+誰かに繋ぐ魔法  
+(누군가에게 이어지는 마법)  
 
-記憶を辿るたび 蘇るよ 
-(기억을 더듬을 때마다 되살아나) 
-君がいつだってそこに居てくれること 
-(네가 언제라도 그곳에 있어주는 것) 
-まるでそれは星の光と 同じように 
-(마치 그건 별의 빛과 똑같이) 
-今日に泣いたり笑ったり繋いでいく 
-(오늘을 울면서 웃으면서 이어가고 있어) 
+僕ら 肩並べ 手取り合って進んでく  
+(우리 어깨를 나란히 하고 손을 잡은 채 나아가다)  
+辛い時だって 泣かないって誓っただろう  
+(괴로운 날도 울지 않겠다고 맹세했잖아)  
+遥か遠く終わらないべテルギウス  
+(아득히 멀리에서 끝나지 않는 베텔기우스)  
+君にも見えるだろう 祈りが  
+(너에게도 보일 거야, 이 기도가)  
 
-何十回 何百回 ぶつかりあって 
-(몇 십 번, 몇 백 번 부딪쳐서) 
-何十年 何百年 昔の光が 
-(몇 십 년, 몇 백 년 옛날의 빛이) 
-僕自身も忘れたころに 
-(나 자신도 잊어버렸을 즈음에) 
-僕らを照らしてる 
-(우리를 비추고 있어) 
+記憶を辿るたび 蘇るよ  
+(기억을 더듬을 때마다 선명해지는)  
+君がいつだってそこに居てくれること  
+(네가 변함없이 그곳에 있어 주었던 날들)  
+まるでそれは星の光と 同じように  
+(우리 역시 저 별빛처럼)  
+今日に泣いたり笑ったり繋いでいく  
+(울고 웃으며 오늘을 이어가는 거야)  
 
-僕ら見つけあって 手繰りあって 同じ空 
-(우리는 서로 찾아내고, 서로 당기며 똑같은 하늘을) 
-輝くのだって 二人だって 約束した 
-(빛내자고, 둘이 있자고 약속했어) 
-遥か遠く終わらないべテルギウス 
-(아득히 먼 끝나지 않는 베텔기우스) 
-誰かに繋ぐ魔法 
-(누군가에게 이어지는 마법) 
+何十回 何百回 ぶつかりあって  
+(수십 번 수백 번 부딪혀 만든)  
+何十年 何百年 昔の光が  
+(수십 년 수백 년 전 오래된 빛이)  
+僕自身も忘れたころに  
+(나 자신도 잊어갈 무렵)  
+僕らを照らしてる  
+(우리를 비추고 있어)  
 
-どこまで いつまで 生きられるか 
-(어디까지 언제까지 살 수 있을까) 
-君が不安になるたびに強がるんだ 
-(네가 불안해 할 때마다 강한 척을 해) 
-大丈夫 僕が横にいるよ 
-(괜찮아, 내가 곁에 있을게) 
-見えない線を繋ごう 
-(보이지 않는 선을 잇자) 
+僕ら見つけあって 手繰りあって同じ空  
+(우리는 서로를 찾아내고 끌어당기며 같은 하늘에서)  
+輝くのだって 二人だって約束した  
+(둘이 함께 빛나자고 약속했었지)  
+遥か遠く終わらないべテルギウス  
+(아득히 멀리에서 끝나지 않는 베텔기우스)  
+誰かに繋ぐ魔法  
+(누군가에게 이어지는 마법)  
 
-높은 하늘을 헤집어 서로를 당겨 안아 줄 테니
-꺼지지 않고 함께 빛나리라고 약속했었잖아
-하루를 넘어서 이어지는 베텔기우스
-너에게로 이어질 마법
+どこまで いつまで 生きられるか  
+(어디까지 언제까지 살아갈 수 있을까)  
+君が不安になるたびに強がるんだ  
+(네가 불안해 할 때마다 강한 척을 해)  
+大丈夫 僕が横にいるよ  
+(괜찮아, 내가 곁에 있을 테니)  
+見えない線を繋ごう  
+(보이지 않는 선을 이어가 보자)  
 
-어깨를 나란히 맞대 손을 잡은 채 서성대고
-길을 잃을 지라도 놓지 않을게 잊지 못하도록
-아득히 멀리에서 영원할 베텔기우스
-너에게도 닿아 있는지, 이 바람이
+높은 하늘을 헤집어 서로를 당겨 안아 줄 테니  
+꺼지지 않고 함께 빛나리라고 약속했었잖아  
+하루를 넘어서 이어지는 베텔기우스  
+너에게로 이어질 마법  
 
-소란히 아른대는 빛을 믿지 못한 내게
-속삭이듯이 말해 주었지 별이 아름답다고 
+어깨를 나란히 맞대 손을 잡은 채 서성대고  
+길을 잃을 지라도 놓지 않을게 잊지 못하도록  
+아득히 멀리에서 영원할 베텔기우스  
+너에게도 닿아 있는지, 이 바람이  
+
+소란히 아른대는 빛을 믿지 못한 내게  
+속삭이듯이 말해 주었지 별이 아름답다고
 `,
   },
-    {
-      original: 0,
-      title: "???",
-      part: "2",
-      meta: "", //"원곡 | 유다빈밴드\n참여 | 김리율(V) 한호현(G1) 이우준(G2) 김예은(B) 조민재(D) 정홍준(K1) 이서윤(K2)"
-      lyrics: "Coming soon", /*`달려가고 있었어
+  {
+    original: 0,
+    title: "???",
+    part: "2",
+    meta: "", //"원곡 | 유다빈밴드\n참여 | 김리율(V) 한호현(G1) 이우준(G2) 김예은(B) 조민재(D) 정홍준(K1) 이서윤(K2)"
+    lyrics: "Coming soon" /*`달려가고 있었어
 작은 결심을 품고
 숨찬 언덕길
 끝에 선 두 발자국
@@ -990,12 +991,9 @@ Wave your flag
 
 달려가고 있었어
 작은 결심을 품고
-`*/
-  }
+`*/,
+  },
 ];
-
-
-
 
 document.addEventListener("DOMContentLoaded", () => {
   const songList = document.getElementById("songList");
@@ -1007,53 +1005,58 @@ document.addEventListener("DOMContentLoaded", () => {
   const setlistRightShadow = document.querySelector(".setlist-right-shadow");
 
   // setlist-right 이동을 위한 상수
-  const PANEL_CLOSED_LEFT = '88vw';
-  const PANEL_OPEN_LEFT   = '12vw';
+  const PANEL_CLOSED_LEFT = "88vw";
+  const PANEL_OPEN_LEFT = "12vw";
 
-  const SHADOW_W          = '11vw';
-  const SHADOW_CLOSED_LEFT= `calc(${PANEL_CLOSED_LEFT} - ${SHADOW_W})`;
-  const SHADOW_OPEN_LEFT  = `calc(${PANEL_OPEN_LEFT} - ${SHADOW_W})`;
+  const SHADOW_W = "11vw";
+  const SHADOW_CLOSED_LEFT = `calc(${PANEL_CLOSED_LEFT} - ${SHADOW_W})`;
+  const SHADOW_OPEN_LEFT = `calc(${PANEL_OPEN_LEFT} - ${SHADOW_W})`;
 
   // setlist-right 이동 함수
-  function movePanel(isOpen){
-    if (setlistRight)        setlistRight.style.left        = isOpen ? PANEL_OPEN_LEFT    : PANEL_CLOSED_LEFT;
-    if (setlistRightShadow)  setlistRightShadow.style.left  = isOpen ? SHADOW_OPEN_LEFT   : SHADOW_CLOSED_LEFT;
+  function movePanel(isOpen) {
+    if (setlistRight)
+      setlistRight.style.left = isOpen ? PANEL_OPEN_LEFT : PANEL_CLOSED_LEFT;
+    if (setlistRightShadow)
+      setlistRightShadow.style.left = isOpen
+        ? SHADOW_OPEN_LEFT
+        : SHADOW_CLOSED_LEFT;
   }
 
   // 기본 상태 : closed
-  function showHint(){
-    detailHeader.className = 'song-detail-header centered';
-    detailHeader.innerHTML = '클릭하여 세부 정보를 확인해주세요!';
-    if (divider) divider.style.display = 'none';
-    lyricsBox.innerHTML = '';
+  function showHint() {
+    detailHeader.className = "song-detail-header centered";
+    detailHeader.innerHTML = "클릭하여 세부 정보를 확인해주세요!";
+    if (divider) divider.style.display = "none";
+    lyricsBox.innerHTML = "";
     movePanel(false);
   }
 
   // 셋리 디테일 상태 : open
-  function showSong(song){
-    detailHeader.className = 'song-detail-header';
+  function showSong(song) {
+    detailHeader.className = "song-detail-header";
     detailHeader.innerHTML = `
       <div class="song-title-wrapper">
         <strong>${song.title}</strong>
       </div>
       <div class="song-meta">
-        ${song.meta.replaceAll('\n','<br>')}
+        ${song.meta.replaceAll("\n", "<br>")}
       </div>
     `;
 
-
     // X 버튼
-    const closeBtn = document.createElement('span');
-    closeBtn.classList.add('song-detail-close-btn');
-    closeBtn.innerHTML = '&times;';
+    const closeBtn = document.createElement("span");
+    closeBtn.classList.add("song-detail-close-btn");
+    closeBtn.innerHTML = "&times;";
     closeBtn.onclick = () => {
-      Array.from(songList.children).forEach(n => n.classList.remove('active'));
+      Array.from(songList.children).forEach((n) =>
+        n.classList.remove("active")
+      );
       showHint();
     };
-    detailHeader.querySelector('.song-title-wrapper').appendChild(closeBtn);
+    detailHeader.querySelector(".song-title-wrapper").appendChild(closeBtn);
 
-    if (divider) divider.style.display = 'block';
-    lyricsBox.textContent = song.lyrics || '가사 정보가 없습니다.';
+    if (divider) divider.style.display = "block";
+    lyricsBox.textContent = song.lyrics || "가사 정보가 없습니다.";
 
     movePanel(true);
   }
@@ -1061,35 +1064,39 @@ document.addEventListener("DOMContentLoaded", () => {
   // 곡 리스트 렌더
   function renderSongs(part) {
     songList.innerHTML = "";
-    songs.filter(song => song.part === part).forEach(song => {
-      const li = document.createElement("li");
-      li.textContent = song.title;
+    songs
+      .filter((song) => song.part === part)
+      .forEach((song) => {
+        const li = document.createElement("li");
+        li.textContent = song.title;
 
-      if (song.original === 1) li.classList.add("original-song");
+        if (song.original === 1) li.classList.add("original-song");
 
-      li.addEventListener('click', () => {
-        Array.from(songList.children).forEach(n => n.classList.remove('active'));
-        li.classList.add('active');
-        showSong(song);
+        li.addEventListener("click", () => {
+          Array.from(songList.children).forEach((n) =>
+            n.classList.remove("active")
+          );
+          li.classList.add("active");
+          showSong(song);
+        });
+
+        songList.appendChild(li);
       });
-
-      songList.appendChild(li);
-    });
   }
 
   // 탭 전환
   tabs.forEach((tab) => {
-    tab.addEventListener('click', () => {
-      tabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
+    tab.addEventListener("click", () => {
+      tabs.forEach((t) => t.classList.remove("active"));
+      tab.classList.add("active");
       renderSongs(tab.dataset.part);
       showHint();
     });
   });
 
   // 초기 상태
-  tabs.forEach(t => t.classList.remove('active'));
-  document.querySelector('.tab[data-part="1"]')?.classList.add('active');
-  renderSongs('1');
+  tabs.forEach((t) => t.classList.remove("active"));
+  document.querySelector('.tab[data-part="1"]')?.classList.add("active");
+  renderSongs("1");
   showHint();
 });
