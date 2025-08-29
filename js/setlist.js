@@ -933,66 +933,69 @@ Wave your flag
       original: 0,
       title: "???",
       part: "2",
-      meta: "원곡 | 유다빈밴드\n참여 | 김리율(V) 한호현(G1) 이우준(G2) 김예은(B) 조민재(D) 정홍준(K1) 이서윤(K2)",
-      lyrics: `달려가고 있었어
-  작은 결심을 품고
-  숨찬 언덕길
-  끝에 선 두 발자국
-  그때 시작된 나의 노래
+      meta: "", //"원곡 | 유다빈밴드\n참여 | 김리율(V) 한호현(G1) 이우준(G2) 김예은(B) 조민재(D) 정홍준(K1) 이서윤(K2)"
+      lyrics: "Coming soon", /*`달려가고 있었어
+작은 결심을 품고
+숨찬 언덕길
+끝에 선 두 발자국
+그때 시작된 나의 노래
 
-  도망치고 싶었던
-  겁이 많았던 시절
-  한참 망설인
-  걷잡을 수 없는 마음
-  내 두 손에 꼭 쥔 약속
-  운명을 믿지 않았던 너에게로
+도망치고 싶었던
+겁이 많았던 시절
+한참 망설인
+걷잡을 수 없는 마음
+내 두 손에 꼭 쥔 약속
+운명을 믿지 않았던 너에게로
 
-  이 시간과 공간을 훌쩍 넘어서
-  마주침의 뜨거운 순간을
-  한없이 기다리고 있던
-  그날의 우리를 찾을 수 있기를
+이 시간과 공간을 훌쩍 넘어서
+마주침의 뜨거운 순간을
+한없이 기다리고 있던
+그날의 우리를 찾을 수 있기를
 
-  한 번쯤 들었겠지
-  노래는 한밤의 불빛처럼 달려
-  쉼 없이 이 길을 거슬러
-  마침내 도착한 곳에서
-  오랜 약속처럼 너를 만나기를 오-
+한 번쯤 들었겠지
+노래는 한밤의 불빛처럼 달려
+쉼 없이 이 길을 거슬러
+마침내 도착한 곳에서
+오랜 약속처럼 너를 만나기를 오-
 
-  아무 말도 없었지
-  고개 숙여 웃던 너
-  문득 낚아챈 너의 손을 꼭 잡고서
-  이 길 끝까지 달리자
-  그것이 나의 고백이 될 수 있게
+아무 말도 없었지
+고개 숙여 웃던 너
+문득 낚아챈 너의 손을 꼭 잡고서
+이 길 끝까지 달리자
+그것이 나의 고백이 될 수 있게
 
-  마음과 마음은 한껏 부풀어
-  터질 듯한 가슴의 떨림
-  쏟아질 듯했던 하늘과
-  그때 저 멀리서 울렸던 피아노
+마음과 마음은 한껏 부풀어
+터질 듯한 가슴의 떨림
+쏟아질 듯했던 하늘과
+그때 저 멀리서 울렸던 피아노
 
-  한 번쯤 들었겠지
-  노래는 한밤의 불빛처럼 달려
-  수많은 날들이 흘러도
-  잊을 수가 없던 뒷모습
-  서툰 첫인사로 다시 만나기를
-  또 빛나기를 눈부시기를
-  아름다운 만큼 짧았던 그날처럼
+한 번쯤 들었겠지
+노래는 한밤의 불빛처럼 달려
+수많은 날들이 흘러도
+잊을 수가 없던 뒷모습
+서툰 첫인사로 다시 만나기를
+또 빛나기를 눈부시기를
+아름다운 만큼 짧았던 그날처럼
 
-  시간과 공간을 훌쩍 넘어서
-  다시 운명에게 묻는다
-  너의 손을 놓지 않았다면
-  우린 어디쯤을 달리고 있을까
+시간과 공간을 훌쩍 넘어서
+다시 운명에게 묻는다
+너의 손을 놓지 않았다면
+우린 어디쯤을 달리고 있을까
 
-  한 번쯤 들었겠지
-  노래는 한밤의 불빛처럼 달려
-  쉼 없이 이 길을 거슬러
-  마침내 도착한 곳에서
-  오랜 약속처럼 너를 만나기를 오-
+한 번쯤 들었겠지
+노래는 한밤의 불빛처럼 달려
+쉼 없이 이 길을 거슬러
+마침내 도착한 곳에서
+오랜 약속처럼 너를 만나기를 오-
 
-  달려가고 있었어
-  작은 결심을 품고
-  `
+달려가고 있었어
+작은 결심을 품고
+`*/
   }
 ];
+
+
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const songList = document.getElementById("songList");
@@ -1001,109 +1004,89 @@ document.addEventListener("DOMContentLoaded", () => {
   const tabs = document.querySelectorAll(".tab");
   const divider = document.getElementById("songDivider");
   const setlistRight = document.querySelector(".setlist-right");
+  const setlistRightShadow = document.querySelector(".setlist-right-shadow");
 
-  function closePanel() {
-    setDefaultDetailMessage();
-    Array.from(songList.children).forEach((n) => n.classList.remove("active"));
+  // setlist-right 이동을 위한 상수
+  const PANEL_CLOSED_LEFT = '88vw';
+  const PANEL_OPEN_LEFT   = '12vw';
+
+  const SHADOW_W          = '11vw';
+  const SHADOW_CLOSED_LEFT= `calc(${PANEL_CLOSED_LEFT} - ${SHADOW_W})`;
+  const SHADOW_OPEN_LEFT  = `calc(${PANEL_OPEN_LEFT} - ${SHADOW_W})`;
+
+  // setlist-right 이동 함수
+  function movePanel(isOpen){
+    if (setlistRight)        setlistRight.style.left        = isOpen ? PANEL_OPEN_LEFT    : PANEL_CLOSED_LEFT;
+    if (setlistRightShadow)  setlistRightShadow.style.left  = isOpen ? SHADOW_OPEN_LEFT   : SHADOW_CLOSED_LEFT;
   }
 
-  if (setlistRight) {
-    setlistRight.addEventListener("click", (e) => {
-      if (e.target === setlistRight) {
-        closePanel();
-      }
-    });
+  // 기본 상태 : closed
+  function showHint(){
+    detailHeader.className = 'song-detail-header centered';
+    detailHeader.innerHTML = '클릭하여 세부 정보를 확인해주세요!';
+    if (divider) divider.style.display = 'none';
+    lyricsBox.innerHTML = '';
+    movePanel(false);
   }
 
-  // 안내문(센터 정렬) 세팅 함수
-  function setDefaultDetailMessage() {
-    detailHeader.classList.add("centered"); // CSS에 .song-detail-header.centered 정의 필요
-    detailHeader.innerHTML =
-      "클릭하여 세부 정보를 확인해주세요!\n<br />창을 다시 클릭하면 창이 닫힙니다.";
-    lyricsBox.innerHTML = "";
-    if (divider) divider.style.display = "none";
-    if (setlistRight) {
-      setlistRight.style.left = "85vw";
-    }
+  // 셋리 디테일 상태 : open
+  function showSong(song){
+    detailHeader.className = 'song-detail-header';
+    detailHeader.innerHTML = `
+      <div class="song-title-wrapper">
+        <strong>${song.title}</strong>
+      </div>
+      <span style="font-size:0.85rem;">${song.meta.replaceAll('\n','<br>')}</span>
+    `;
+
+    // X 버튼
+    const closeBtn = document.createElement('span');
+    closeBtn.classList.add('song-detail-close-btn');
+    closeBtn.innerHTML = '&times;';
+    closeBtn.onclick = () => {
+      Array.from(songList.children).forEach(n => n.classList.remove('active'));
+      showHint();
+    };
+    detailHeader.querySelector('.song-title-wrapper').appendChild(closeBtn);
+
+    if (divider) divider.style.display = 'block';
+    lyricsBox.textContent = song.lyrics || '가사 정보가 없습니다.';
+
+    movePanel(true);
   }
 
+  // 곡 리스트 렌더
   function renderSongs(part) {
     songList.innerHTML = "";
-    songs
-      .filter((song) => song.part === part)
-      .forEach((song) => {
-        const li = document.createElement("li");
-        li.textContent = song.title;
+    songs.filter(song => song.part === part).forEach(song => {
+      const li = document.createElement("li");
+      li.textContent = song.title;
 
-        if (song.original === 1) {
-          li.classList.add("original-song");
-        }
+      if (song.original === 1) li.classList.add("original-song");
 
-        // 클릭 토글
-        li.addEventListener("click", () => {
-          const alreadyActive = li.classList.contains("active");
-          // 모두 비활성화
-          Array.from(songList.children).forEach((n) =>
-            n.classList.remove("active")
-          );
-          if (alreadyActive) {
-            // 접기
-            setDefaultDetailMessage();
-            return;
-          }
-          // 활성화
-          li.classList.add("active");
-          if (setlistRight) {
-            setlistRight.style.left = "12vw";
-          }
-          // 상세(좌측 정렬로 전환)
-          detailHeader.classList.remove("centered");
-          detailHeader.innerHTML =
-            `
-            <div class="song-title-wrapper">
-              <strong>${song.title}</strong>
-            </div>
-            <span style="font-size:0.85rem;">${song.meta.replaceAll(
-              "\n",
-              "<br>"
-            )}</span>
-          `
-
-          const closeBtn = document.createElement('span');
-          closeBtn.classList.add('song-detail-close-btn');
-          closeBtn.innerHTML = '&times;';
-          closeBtn.onclick = (e) => {
-              e.stopPropagation();
-              closePanel();
-          };
-
-          detailHeader.querySelector('.song-title-wrapper').appendChild(closeBtn);
-
-          // 구분선 + 가사 표시
-          if (divider) divider.style.display = "block";
-          lyricsBox.textContent = song.lyrics || "가사 정보가 없습니다.";
-        });
-
-        songList.appendChild(li);
+      li.addEventListener('click', () => {
+        Array.from(songList.children).forEach(n => n.classList.remove('active'));
+        li.classList.add('active');
+        showSong(song);
       });
+
+      songList.appendChild(li);
+    });
   }
 
   // 탭 전환
   tabs.forEach((tab) => {
-    tab.addEventListener("click", () => {
-      tabs.forEach((t) => t.classList.remove("active"));
-      tab.classList.add("active");
-
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
       renderSongs(tab.dataset.part);
-      setDefaultDetailMessage(); // 안내문 중앙 정렬 상태로 리셋
+      showHint();
     });
   });
 
-  // 초기 상태: 1부 탭 활성화 + 리스트 렌더 + 안내문
-  tabs.forEach((t) => t.classList.remove("active"));
-  const firstTab = document.querySelector('.tab[data-part="1"]');
-  if (firstTab) firstTab.classList.add("active");
-
-  renderSongs("1");
-  setDefaultDetailMessage();
+  // 초기 상태
+  tabs.forEach(t => t.classList.remove('active'));
+  document.querySelector('.tab[data-part="1"]')?.classList.add('active');
+  renderSongs('1');
+  showHint();
 });
