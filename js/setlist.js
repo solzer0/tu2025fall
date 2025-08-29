@@ -1036,8 +1036,11 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="song-title-wrapper">
         <strong>${song.title}</strong>
       </div>
-      <span style="font-size:0.85rem;">${song.meta.replaceAll('\n','<br>')}</span>
+      <div class="song-meta">
+        ${song.meta.replaceAll('\n','<br>')}
+      </div>
     `;
+
 
     // X 버튼
     const closeBtn = document.createElement('span');
