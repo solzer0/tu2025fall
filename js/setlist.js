@@ -7,7 +7,7 @@ const songs = [
     original: 0,
     title: "Far Away",
     part: "1",
-    meta: "원곡 | 라쿠나\n참여 | 옥민준(V, G2) 유수민(G1, Chorus) 조아름(B) 오다연(D) 김다영(K)",
+    meta: "원곡 | 라쿠나\n참여 | 옥민준(V, G2) 유수민(G1, Chorus) 조아름(B) 오다연(D) 김다영(K) 신한영(Chorus) 이민규(Chorus)",
     lyrics: `창 밖은 흑백으로 덮혀 있어 
 아까부터 비는 내리고 있어 
 너는 작은 의자에 몸을 맡기고 
